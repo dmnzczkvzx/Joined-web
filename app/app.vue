@@ -131,9 +131,9 @@ function getInitialMessage(chatIndex: number): Message {
     cs: [
       // ── Chat 0: Spolupráce – úvoddd ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Joined.cz s.r.o.</h2>
-          <p class="text-emerald-400 text-sm font-medium">E-commerce · Technologie · Marketplace Operations</p>
+          <p class="text-cyan-400 text-sm font-medium">E-commerce · Technologie · Marketplace Operations</p>
         </div>
         <p>Jsme technologická firma zaměřená na <strong>e-commerce</strong> a <strong>online prodej</strong>.
            Budujeme a provozujeme obchodní kanály – od vlastních e-shopů po mezinárodní marketplace platformy.</p>
@@ -143,9 +143,9 @@ function getInitialMessage(chatIndex: number): Message {
 
       // ── Chat 1: Marketplace expanze EU ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Marketplace expanze EU</h2>
-          <p class="text-emerald-400 text-sm font-medium">Amazon · Kaufland · Allegro · bol.com</p>
+          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · bol.com</p>
         </div>
         <p>Pomáháme značkám <strong>expandovat na evropské marketplace platformy</strong>.
            Od analýzy trhu přes listing až po logistiku a zákaznický servis.</p>
@@ -155,9 +155,9 @@ function getInitialMessage(chatIndex: number): Message {
 
       // ── Chat 2: Tech stack & architektura ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Tech stack & architektura</h2>
-          <p class="text-emerald-400 text-sm font-medium">Vue · Node.js · AWS · PostgreSQL</p>
+          <p class="text-cyan-400 text-sm font-medium">Vue · Node.js · AWS · PostgreSQL</p>
         </div>
         <p>Stavíme na <strong>moderních technologiích</strong> s důrazem na škálovatelnost,
            výkon a rychlost nasazení. Žádný legacy – čistý, udržovatelný kód.</p>
@@ -166,9 +166,9 @@ function getInitialMessage(chatIndex: number): Message {
 
       // ── Chat 3: Integrace ERP systémů ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Integrace ERP systémů</h2>
-          <p class="text-emerald-400 text-sm font-medium">SAP · Pohoda · Money S3 · BaseLinker</p>
+          <p class="text-cyan-400 text-sm font-medium">SAP · Pohoda · Money S3 · BaseLinker</p>
         </div>
         <p>Propojujeme <strong>ERP, WMS, PIM a e-commerce platformy</strong> do jednoho
            fungujícího ekosystému. Obousměrná synchronizace, real-time data.</p>
@@ -179,9 +179,9 @@ function getInitialMessage(chatIndex: number): Message {
     en: [
       // ── Chat 0: Cooperation – intro ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Joined.cz s.r.o.</h2>
-          <p class="text-emerald-400 text-sm font-medium">E-commerce · Technology · Marketplace Operations</p>
+          <p class="text-cyan-400 text-sm font-medium">E-commerce · Technology · Marketplace Operations</p>
         </div>
         <p>We are a technology company focused on <strong>e-commerce</strong> and <strong>online sales</strong>.
            We build and operate sales channels – from custom e-shops to international marketplace platforms.</p>
@@ -191,9 +191,9 @@ function getInitialMessage(chatIndex: number): Message {
 
       // ── Chat 1: EU marketplace expansion ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">EU Marketplace Expansion</h2>
-          <p class="text-emerald-400 text-sm font-medium">Amazon · Kaufland · Allegro · bol.com</p>
+          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · bol.com</p>
         </div>
         <p>We help brands <strong>expand to European marketplace platforms</strong>.
            From market analysis through listing to logistics and customer service.</p>
@@ -203,9 +203,9 @@ function getInitialMessage(chatIndex: number): Message {
 
       // ── Chat 2: Tech stack & architecture ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Tech Stack & Architecture</h2>
-          <p class="text-emerald-400 text-sm font-medium">Vue · Node.js · AWS · PostgreSQL</p>
+          <p class="text-cyan-400 text-sm font-medium">Vue · Node.js · AWS · PostgreSQL</p>
         </div>
         <p>We build on <strong>modern technologies</strong> with a focus on scalability,
            performance, and deployment speed. No legacy – clean, maintainable code.</p>
@@ -214,9 +214,9 @@ function getInitialMessage(chatIndex: number): Message {
 
       // ── Chat 3: ERP system integration ──
       `<div class="space-y-4">
-        <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6">
+        <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">ERP System Integration</h2>
-          <p class="text-emerald-400 text-sm font-medium">SAP · Pohoda · Money S3 · BaseLinker</p>
+          <p class="text-cyan-400 text-sm font-medium">SAP · Pohoda · Money S3 · BaseLinker</p>
         </div>
         <p>We connect <strong>ERP, WMS, PIM and e-commerce platforms</strong> into one
            working ecosystem. Bidirectional sync, real-time data.</p>
@@ -272,12 +272,12 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Pracujeme s moderním stackem:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Frontend:</strong> Vue.js, Nuxt</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Backend:</strong> Node.js, Python</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">E-commerce:</strong> Shopify, custom</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Integrace:</strong> BaseLinker, middleware</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Cloud:</strong> AWS, Vercel</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Data:</strong> PostgreSQL, pipelines</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Frontend:</strong> Vue.js, Nuxt</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Backend:</strong> Node.js, Python</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">E-commerce:</strong> Shopify, custom</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Integrace:</strong> BaseLinker, middleware</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Cloud:</strong> AWS, Vercel</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Data:</strong> PostgreSQL, pipelines</div>
               </div>
               <p>Vybíráme nástroje podle potřeb projektu, ne naopak.</p>
             </div>`,
@@ -304,7 +304,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
           response: `
             <div class="space-y-3">
               <p>Nejrychlejší cesta k nám:</p>
-              <div class="bg-white/5 rounded-xl p-4 space-y-2 not-prose">
+              <div class="bg-white/4 rounded-sm p-4 space-y-2 not-prose">
                 <p class="text-gray-300">📧 <strong class="text-white">hello@xyz.cz</strong></p>
                 <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/xyz</strong></p>
                 <p class="text-gray-300">📍 Praha, Česká republika</p>
@@ -357,10 +357,10 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Naše benchmarky napříč projekty:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Avg. ROAS:</strong> 4.2x</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Trhy:</strong> 8 zemí EU</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Platformy:</strong> 15+</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">SKUs:</strong> 5 000+</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Avg. ROAS:</strong> 4.2x</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Trhy:</strong> 8 zemí EU</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Platformy:</strong> 15+</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">SKUs:</strong> 5 000+</div>
               </div>
               <p>Konkrétní case studies rádi představíme na osobním callu.</p>
             </div>`,
@@ -407,10 +407,10 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Backend infrastruktura:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Runtime:</strong> Node.js, Python</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">API:</strong> REST, GraphQL</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">DB:</strong> PostgreSQL, Redis</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Queue:</strong> BullMQ, SQS</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Runtime:</strong> Node.js, Python</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">API:</strong> REST, GraphQL</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">DB:</strong> PostgreSQL, Redis</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Queue:</strong> BullMQ, SQS</div>
               </div>
               <p>Vše běží na <strong>AWS</strong> s CI/CD přes GitHub Actions.</p>
             </div>`,
@@ -489,10 +489,10 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Typické datové toky, které řešíme:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Objednávky:</strong> MP → ERP</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Sklad:</strong> ERP → MP</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Ceny:</strong> PIM → MP</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Faktury:</strong> ERP → email</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Objednávky:</strong> MP → ERP</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Sklad:</strong> ERP → MP</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Ceny:</strong> PIM → MP</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Faktury:</strong> ERP → email</div>
               </div>
               <p>Vše s <strong>error handling</strong>, retry logikou a notifikacemi při výpadcích.</p>
             </div>`,
@@ -557,12 +557,12 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>We work with a modern stack:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Frontend:</strong> Vue.js, Nuxt</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Backend:</strong> Node.js, Python</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">E-commerce:</strong> Shopify, custom</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Integrations:</strong> BaseLinker, middleware</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Cloud:</strong> AWS, Vercel</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Data:</strong> PostgreSQL, pipelines</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Frontend:</strong> Vue.js, Nuxt</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Backend:</strong> Node.js, Python</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">E-commerce:</strong> Shopify, custom</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Integrations:</strong> BaseLinker, middleware</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Cloud:</strong> AWS, Vercel</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Data:</strong> PostgreSQL, pipelines</div>
               </div>
               <p>We choose tools based on project needs, not the other way around.</p>
             </div>`,
@@ -589,7 +589,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
           response: `
             <div class="space-y-3">
               <p>The fastest way to reach us:</p>
-              <div class="bg-white/5 rounded-xl p-4 space-y-2 not-prose">
+              <div class="bg-white/4 rounded-sm p-4 space-y-2 not-prose">
                 <p class="text-gray-300">📧 <strong class="text-white">hello@xyz.cz</strong></p>
                 <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/xyz</strong></p>
                 <p class="text-gray-300">📍 Prague, Czech Republic</p>
@@ -642,10 +642,10 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Our benchmarks across projects:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Avg. ROAS:</strong> 4.2x</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Markets:</strong> 8 EU countries</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Platforms:</strong> 15+</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">SKUs:</strong> 5,000+</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Avg. ROAS:</strong> 4.2x</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Markets:</strong> 8 EU countries</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Platforms:</strong> 15+</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">SKUs:</strong> 5,000+</div>
               </div>
               <p>We're happy to present specific case studies on a personal call.</p>
             </div>`,
@@ -692,10 +692,10 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Backend infrastructure:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Runtime:</strong> Node.js, Python</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">API:</strong> REST, GraphQL</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">DB:</strong> PostgreSQL, Redis</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Queue:</strong> BullMQ, SQS</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Runtime:</strong> Node.js, Python</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">API:</strong> REST, GraphQL</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">DB:</strong> PostgreSQL, Redis</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Queue:</strong> BullMQ, SQS</div>
               </div>
               <p>Everything runs on <strong>AWS</strong> with CI/CD via GitHub Actions.</p>
             </div>`,
@@ -774,10 +774,10 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Typical data flows we handle:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Orders:</strong> MP → ERP</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Inventory:</strong> ERP → MP</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Prices:</strong> PIM → MP</div>
-                <div class="bg-white/5 rounded-lg px-3 py-2 text-sm text-gray-300"><strong class="text-white">Invoices:</strong> ERP → email</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Orders:</strong> MP → ERP</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Inventory:</strong> ERP → MP</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Prices:</strong> PIM → MP</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Invoices:</strong> ERP → email</div>
               </div>
               <p>All with <strong>error handling</strong>, retry logic, and failure notifications.</p>
             </div>`,
@@ -900,10 +900,10 @@ const popupData = computed(() => {
             <h4 class="text-white font-semibold text-base">Technologie & vývoj</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum.</p>
             <div class="grid grid-cols-2 gap-2">
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">Vue.js / Nuxt</div>
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">Node.js / Python</div>
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">PostgreSQL</div>
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">AWS / Vercel</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Vue.js / Nuxt</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Node.js / Python</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">PostgreSQL</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">AWS / Vercel</div>
             </div>
             <h4 class="text-white font-semibold text-base">Open source</h4>
             <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
@@ -991,10 +991,10 @@ const popupData = computed(() => {
             <h4 class="text-white font-semibold text-base">Technology & development</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum.</p>
             <div class="grid grid-cols-2 gap-2">
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">Vue.js / Nuxt</div>
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">Node.js / Python</div>
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">PostgreSQL</div>
-              <div class="bg-white/5 rounded-lg px-3 py-2 text-sm">AWS / Vercel</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Vue.js / Nuxt</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Node.js / Python</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">PostgreSQL</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">AWS / Vercel</div>
             </div>
             <h4 class="text-white font-semibold text-base">Open source</h4>
             <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
@@ -1121,7 +1121,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex h-screen bg-[#212121] text-gray-200 font-sans">
+  <div class="flex h-screen bg-[#060a12] text-gray-200 font-sans cockpit-bg">
     <!-- Mobile overlay -->
     <Transition name="fade">
       <div
@@ -1144,22 +1144,17 @@ onUnmounted(() => {
         @click.self="closePopup"
       >
         <div
-          class="w-[90vw] md:w-[30vw] h-[70vh] md:h-[50vh] bg-[#2f2f2f] border border-white/10 rounded-xl flex flex-col overflow-hidden animate-fade-in"
+          class="w-[90vw] md:w-[30vw] h-[70vh] md:h-[50vh] bg-[#0d1523] border border-cyan-500/6 rounded-md flex flex-col overflow-hidden animate-fade-in"
         >
           <!-- Popup header -->
-          <div class="flex items-center justify-between px-5 py-3 border-b border-white/10 shrink-0">
-            <h3 class="text-sm font-semibold text-white">{{ popupTitle }}</h3>
-            <button
-              class="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
-              @click="closePopup"
-            >
-              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+          <div class="flex items-center justify-between px-5 py-3 border-b border-cyan-500/6 shrink-0 bg-[#030710]/60">
+            <div class="flex items-center gap-2">
+              <span class="text-[9px] font-mono text-cyan-400/30 uppercase tracking-[0.2em]">JOINED.CZ //</span>
+              <h3 class="text-[11px] font-mono font-semibold text-cyan-400/65 uppercase tracking-wider">{{ popupTitle }}</h3>
+            </div>
+            <button class="p-1.5 hover:bg-cyan-500/10 rounded transition-colors" @click="closePopup">
+              <svg class="w-4 h-4 text-cyan-400/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
@@ -1175,60 +1170,74 @@ onUnmounted(() => {
     <!-- ==================== SIDEBAR ==================== -->
     <aside
       :class="[
-        'fixed inset-y-0 left-0 z-50 w-64 flex flex-col bg-[#171717] border-r border-white/10 transition-transform duration-300',
+        'fixed inset-y-0 left-0 z-50 w-64 flex flex-col bg-[#030710] transition-transform duration-300 sidebar-shadow',
         sidebarOpen ? 'translate-x-0' : '-translate-x-full',
       ]"
     >
       <!-- Logo -->
-      <div class="p-4 border-b border-white/10">
+      <div class="p-4 hud-sep">
         <div class="flex items-center gap-2.5">
           <div
-            class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-sm font-bold text-black"
+            class="w-8 h-8 rounded-sm bg-cyan-400/10 border border-cyan-400/40 flex items-center justify-center text-sm font-bold hud-avatar"
           >
-            <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
     <circle cx="9" cy="12" r="4" />
     <circle cx="15" cy="12" r="4" />
   </svg>
           </div>
           <div>
-            <h1 class="text-base font-bold tracking-tight text-white leading-none italic">
-                Joined<span class="text-emerald-400">.</span>cz
+            <h1 class="text-sm font-mono font-bold tracking-widest text-white leading-none uppercase">
+                JOINED<span class="text-cyan-400">.</span>CZ
               </h1>
-              <p class="text-[10px] text-gray-500 italic">s.r.o.</p>
+              <p class="text-[9px] font-mono text-cyan-400/40 tracking-widest uppercase">S.R.O.</p>
           </div>
+        </div>
+        <div class="mt-3 pt-1.5 flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="w-1 h-1 rounded-full bg-cyan-400 hud-pulse"></span>
+            <span class="text-[9px] font-mono text-cyan-400/40 uppercase tracking-wider">SYS ONLINE</span>
+          </div>
+          <span class="text-[9px] font-mono text-cyan-400/20 tracking-wider">v1.0</span>
         </div>
       </div>
 
-      <!-- History (clickable) -->
+      <!-- Mission Log -->
       <nav class="flex-1 overflow-y-auto p-3 space-y-1">
-        <p class="text-[11px] text-gray-500 uppercase tracking-wider px-3 mb-2">
-          {{ ui.conversations }}
-        </p>
+        <div class="flex items-center gap-2 px-2 mb-3">
+          <span class="text-[9px] font-mono text-cyan-400/30 uppercase tracking-[0.2em]">MISSION LOG</span>
+          <div class="flex-1 h-px bg-cyan-500/5"></div>
+        </div>
         <div
           v-for="(title, i) in sidebarTitles"
           :key="i"
           :class="[
-            'px-3 py-2 rounded-lg text-sm cursor-pointer truncate transition-colors',
+            'px-3 py-2 rounded text-sm cursor-pointer transition-colors flex items-center gap-2.5',
             activeChatIndex === i
-              ? 'bg-white/10 text-white'
+              ? 'bg-cyan-400/8 text-cyan-400 hud-active-item'
               : 'text-gray-500 hover:bg-white/5 hover:text-gray-300',
           ]"
           @click="openChat(i)"
         >
-          {{ title }}
+          <span :class="['w-1.5 h-1.5 rounded-full shrink-0 transition-colors', activeChatIndex === i ? 'bg-cyan-400' : 'bg-cyan-400/20']" />
+          <span class="truncate">{{ title }}</span>
         </div>
       </nav>
 
-      <!-- Bottom links → open popups -->
-      <div class="p-3 border-t border-white/10 space-y-1">
+      <!-- Nav / Bottom -->
+      <div class="p-3 bg-[#020509] hud-sep-top">
+        <div class="flex items-center gap-2 px-1 mb-2">
+          <div class="flex-1 h-px bg-cyan-500/4"></div>
+          <span class="text-[9px] font-mono text-cyan-400/20 uppercase tracking-[0.2em]">NAV</span>
+          <div class="flex-1 h-px bg-cyan-500/4"></div>
+        </div>
         <button
-          class="w-full text-left px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+          class="w-full text-left px-3 py-2 text-[11px] font-mono text-gray-500 hover:text-cyan-400/60 hover:bg-cyan-500/5 rounded uppercase tracking-wider transition-colors"
           @click="openPopup('aboutUs')"
         >
           {{ ui.aboutUs }}
         </button>
         <button
-          class="w-full text-left px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+          class="w-full text-left px-3 py-2 text-[11px] font-mono text-gray-500 hover:text-cyan-400/60 hover:bg-cyan-500/5 rounded uppercase tracking-wider transition-colors"
           @click="openPopup('contact')"
         >
           {{ ui.contact }}
@@ -1243,37 +1252,34 @@ onUnmounted(() => {
         sidebarOpen ? 'md:ml-64' : '',
       ]"
     >
-      <!-- Top bar -->
-      <header
-        class="flex items-center justify-between px-4 h-12 border-b border-white/10 shrink-0"
-      >
-        <button
-          class="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
-          @click="sidebarOpen = !sidebarOpen"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
-        <nav class="flex items-center gap-1">
-          <!-- Nav links → open popups -->
+      <!-- Bridge Status Bar -->
+      <header class="flex items-center justify-between px-4 h-12 shrink-0 bg-[#030710]/70">
+        <div class="flex items-center gap-4">
+          <button
+            class="p-1.5 hover:bg-cyan-500/10 rounded transition-colors"
+            @click="sidebarOpen = !sidebarOpen"
+          >
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <div class="hidden md:flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 hud-pulse"></span>
+            <span class="text-[9px] font-mono text-cyan-400/40 uppercase tracking-[0.18em]">COMMS ACTIVE</span>
+          </div>
+        </div>
+        <nav class="flex items-center gap-0.5">
           <button
             v-for="link in navLinks"
             :key="link.key"
-            class="px-3 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+            class="px-3 py-1.5 text-[10px] font-mono text-gray-500 hover:text-cyan-400/70 hover:bg-cyan-500/5 rounded uppercase tracking-wider transition-colors"
             @click="openPopup(link.key, 'top-right')"
           >
             {{ link.label }}
           </button>
-          <!-- Language toggle -->
-          <div class="w-px h-4 bg-white/10 mx-1" />
+          <div class="w-px h-4 bg-cyan-500/15 mx-1" />
           <button
-            class="px-3 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors font-medium"
+            class="px-3 py-1.5 text-[10px] font-mono text-gray-500 hover:text-cyan-400/70 hover:bg-cyan-500/5 rounded uppercase tracking-wider transition-colors"
             @click="toggleLang"
           >
             {{ lang === 'cs' ? 'EN' : 'CZ' }}
@@ -1281,108 +1287,113 @@ onUnmounted(() => {
         </nav>
       </header>
 
+      <!-- Channel Indicator -->
+      <div class="px-6 py-2 bg-[#030710]/50 shrink-0">
+        <div class="max-w-4xl mx-auto flex items-center gap-2.5">
+          <span class="text-[9px] font-mono text-cyan-400/30 uppercase tracking-[0.2em]">CHANNEL</span>
+          <span class="text-[9px] font-mono text-cyan-400/20">//</span>
+          <span class="text-[10px] font-mono text-cyan-400/55 uppercase tracking-wider">{{ sidebarTitles[activeChatIndex] }}</span>
+          <div class="ml-auto flex items-center gap-1.5">
+            <span class="w-1 h-1 rounded-full bg-cyan-400/50 hud-pulse"></span>
+            <span class="text-[9px] font-mono text-cyan-400/25 uppercase">LIVE</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Chat messages -->
       <main ref="chatContainer" class="flex-1 overflow-y-auto">
-        <div class="max-w-4xl mx-auto px-4 py-8 space-y-6">
+        <div class="max-w-4xl mx-auto px-6 py-8 space-y-6">
           <template v-for="(msg, i) in currentChat?.messages" :key="`${activeChatIndex}-${i}`">
             <!-- Assistant -->
-            <div v-if="msg.role === 'assistant'" class="flex gap-3 items-start animate-fade-in">
-              <div
-                class="w-7 h-7 mt-1 shrink-0 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-[11px] font-bold text-black"
-              >
-                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-    <circle cx="9" cy="12" r="4" />
-    <circle cx="15" cy="12" r="4" />
-  </svg>
+            <div v-if="msg.role === 'assistant'" class="flex gap-4 items-start animate-fade-in">
+              <div class="w-7 h-7 mt-0.5 shrink-0 rounded-sm bg-cyan-400/10 border border-cyan-400/40 flex items-center justify-center hud-avatar">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="9" cy="12" r="4" /><circle cx="15" cy="12" r="4" />
+                </svg>
               </div>
-              <div
-                class="prose prose-invert prose-sm max-w-none prose-p:text-gray-300 prose-strong:text-white prose-li:text-gray-300 prose-ul:list-none prose-ul:pl-0 prose-li:pl-0"
-                v-html="msg.html || msg.content"
-              />
+              <div class="flex-1 min-w-0 hud-msg prose prose-invert prose-sm max-w-none prose-p:text-gray-300 prose-strong:text-white prose-li:text-gray-300 prose-ul:list-none prose-ul:pl-0 prose-li:pl-0"
+                v-html="msg.html || msg.content" />
             </div>
 
             <!-- User -->
             <div v-if="msg.role === 'user'" class="flex justify-end animate-fade-in">
-              <div class="bg-[#2f2f2f] px-4 py-2.5 rounded-2xl text-sm">
+              <div class="max-w-[78%] bg-[#0d1523] border border-cyan-500/6 px-4 py-2.5 rounded-sm text-sm text-gray-300 hud-user-msg">
                 {{ msg.content }}
               </div>
             </div>
           </template>
 
           <!-- Typing indicator -->
-          <div v-if="isTyping" class="flex gap-3 items-start animate-fade-in">
-            <div
-              class="w-7 h-7 mt-1 shrink-0 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-[11px] font-bold text-black"
-            >
-              <span class="text-sm font-bold italic text-black">J</span>
+          <div v-if="isTyping" class="flex gap-4 items-start animate-fade-in">
+            <div class="w-7 h-7 mt-0.5 shrink-0 rounded-sm bg-cyan-400/10 border border-cyan-400/40 flex items-center justify-center hud-avatar">
+              <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="9" cy="12" r="4" /><circle cx="15" cy="12" r="4" />
+              </svg>
             </div>
             <div class="flex items-center gap-1.5 py-3">
-              <span
-                class="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:0ms]"
-              />
-              <span
-                class="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:150ms]"
-              />
-              <span
-                class="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:300ms]"
-              />
+              <span class="w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-bounce [animation-delay:0ms]" />
+              <span class="w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-bounce [animation-delay:150ms]" />
+              <span class="w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-bounce [animation-delay:300ms]" />
             </div>
           </div>
         </div>
       </main>
 
       <!-- Bottom: chips + fake input -->
-      <div class="border-t border-white/10 p-4 shrink-0">
+      <div class="p-4 shrink-0 bg-[#030710]/60 hud-sep-top">
         <div class="max-w-4xl mx-auto space-y-3">
 
           <!-- Chips: hidden when form is open -->
           <Transition name="fade">
-            <div
-              v-if="currentChat?.availableChips.length && !formOpen"
-              class="grid grid-cols-1 sm:grid-cols-2 gap-2"
-            >
-              <button
-                v-for="chip in currentChat.availableChips"
-                :key="chip.id"
-                class="text-left px-4 py-3 border border-white/10 rounded-xl text-sm hover:bg-white/5 hover:border-white/20 transition-all group"
-                @click="selectChip(chip)"
-              >
-                <span class="text-gray-200 group-hover:text-white font-medium">{{ chip.label }}</span>
-                <p v-if="chip.sublabel" class="text-xs text-gray-500 mt-0.5">{{ chip.sublabel }}</p>
-              </button>
+            <div v-if="currentChat?.availableChips.length && !formOpen">
+              <div class="flex items-center gap-2 mb-2.5">
+                <span class="text-[9px] font-mono text-cyan-400/30 uppercase tracking-[0.2em]">AVAILABLE QUERIES</span>
+                <div class="flex-1 h-px bg-cyan-500/5"></div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <button
+                  v-for="chip in currentChat.availableChips"
+                  :key="chip.id"
+                  class="text-left px-4 py-3 rounded-sm text-sm hover:bg-cyan-500/5 transition-all group hud-chip"
+                  @click="selectChip(chip)"
+                >
+                  <span class="text-gray-300 group-hover:text-white font-medium">{{ chip.label }}</span>
+                  <p v-if="chip.sublabel" class="text-[10px] font-mono text-cyan-400/30 mt-0.5 uppercase tracking-wide">{{ chip.sublabel }}</p>
+                </button>
+              </div>
             </div>
           </Transition>
 
           <!-- Collapsed: clickable bar -->
           <div
             v-if="!formOpen"
-            class="flex items-center gap-3 bg-[#2f2f2f] rounded-2xl px-4 py-3 hover:bg-[#353535] transition-colors cursor-pointer"
+            class="flex items-center gap-3 bg-[#0d1523] rounded-sm px-4 py-3 hover:bg-[#111d30] transition-all cursor-pointer"
             @click="openForm"
           >
-            <span class="text-sm text-gray-500 flex-1">{{ ui.askAnything }}</span>
-            <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
-              <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
-                />
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="text-[10px] font-mono text-cyan-400/45 uppercase tracking-wider">COMM</span>
+              <span class="text-cyan-400/25 text-xs">▷</span>
+            </div>
+            <span class="text-sm text-gray-600 flex-1">{{ ui.askAnything }}</span>
+            <div class="w-7 h-7 rounded-sm bg-cyan-500/8 border border-cyan-500/6 flex items-center justify-center">
+              <svg class="w-3.5 h-3.5 text-cyan-400/35" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" />
               </svg>
             </div>
           </div>
 
           <!-- Expanded: contact form -->
           <Transition name="fade">
-            <div
-              v-if="formOpen"
-              class="bg-[#2f2f2f] rounded-2xl p-4 space-y-3 animate-fade-in"
-            >
+            <div v-if="formOpen" class="bg-[#0d1523] rounded-sm p-4 space-y-3 animate-fade-in">
               <!-- Close row -->
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-400">{{ ui.askAnything }}</span>
-                <button
-                  class="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
-                  @click="closeForm"
-                >
-                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="flex items-center justify-between mb-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-mono text-cyan-400/45 uppercase tracking-wider">COMM</span>
+                  <span class="text-cyan-400/25 text-xs">▷</span>
+                  <span class="text-[11px] text-gray-500">{{ ui.askAnything }}</span>
+                </div>
+                <button class="p-1.5 hover:bg-cyan-500/10 rounded transition-colors" @click="closeForm">
+                  <svg class="w-4 h-4 text-cyan-400/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
@@ -1393,7 +1404,7 @@ onUnmounted(() => {
                 v-model="formEmail"
                 type="email"
                 :placeholder="ui.yourEmail"
-                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-gray-200 placeholder-gray-500 outline-none focus:border-emerald-500/50 transition-colors"
+                class="w-full bg-cyan-950/30 border border-cyan-500/8 rounded px-4 py-2.5 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-cyan-400/50 transition-colors"
               />
 
               <!-- Message field -->
@@ -1401,7 +1412,7 @@ onUnmounted(() => {
                 v-model="formMessage"
                 :placeholder="ui.yourMessage"
                 rows="4"
-                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-gray-200 placeholder-gray-500 outline-none focus:border-emerald-500/50 transition-colors resize-none"
+                class="w-full bg-cyan-950/30 border border-cyan-500/8 rounded px-4 py-2.5 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-cyan-400/50 transition-colors resize-none"
                 @keydown.ctrl.enter="submitForm"
                 @keydown.meta.enter="submitForm"
               />
@@ -1409,7 +1420,7 @@ onUnmounted(() => {
               <!-- Send button -->
               <div class="flex justify-end">
                 <button
-                  class="px-5 py-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-black text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity"
+                  class="px-5 py-2 bg-cyan-500/15 border border-cyan-400/40 text-cyan-400 text-sm font-mono font-semibold rounded hover:bg-cyan-500/25 hover:border-cyan-400/60 transition-all hud-btn"
                   @click="submitForm"
                 >
                   {{ ui.send }}
@@ -1425,19 +1436,133 @@ onUnmounted(() => {
 </template>
 
 <style>
+/* ── Sidebar: shadow + vertical gradient edge ── */
+.sidebar-shadow {
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.sidebar-shadow::after {
+  content: '';
+  position: absolute;
+  top: 5%; right: 0; bottom: 5%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(0, 210, 255, 0.9) 50%, transparent);
+  pointer-events: none;
+}
+
+/* ── Gradient separator — bottom edge ── */
+.hud-sep {
+  position: relative;
+}
+.hud-sep::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 210, 255, 0.2), transparent);
+  animation: scan 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Gradient separator — top edge ── */
+.hud-sep-top {
+  position: relative;
+}
+.hud-sep-top::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 210, 255, 0.2), transparent);
+  animation: scan 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Cockpit grid background ── */
+.cockpit-bg {
+  background-image:
+    linear-gradient(rgba(0, 210, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 210, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── HUD glow elements ── */
+.hud-avatar {
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.25), inset 0 0 6px rgba(0, 210, 255, 0.05);
+}
+.hud-chip {
+  box-shadow: 0 0 0 1px rgba(0, 210, 255, 0.09);
+}
+.hud-chip:hover {
+  box-shadow: 0 0 0 1px rgba(0, 210, 255, 0.28), 0 0 10px rgba(0, 210, 255, 0.08);
+}
+.hud-btn:hover {
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.3);
+}
+
+/* ── Active sidebar item — left-border accent ── */
+.hud-active-item {
+  box-shadow: inset 2px 0 0 rgba(0, 210, 255, 0.55);
+}
+
+/* ── Pulse animation for status dots ── */
+@keyframes hud-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.hud-pulse {
+  animation: hud-pulse 2.2s ease-in-out infinite;
+}
+
+/* ── Assistant message: subtle left-border panel ── */
+.hud-msg {
+  padding-left: 14px;
+  border-left: 1px solid rgba(0, 210, 255, 0.08);
+}
+
+/* ── User message: corner accent top-right ── */
+.hud-user-msg {
+  position: relative;
+}
+.hud-user-msg::after {
+  content: '';
+  position: absolute;
+  top: -1px; right: -1px;
+  width: 10px; height: 10px;
+  border-top: 1px solid rgba(0, 210, 255, 0.3);
+  border-right: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+/* ── Scanning line on top bar ── */
+@keyframes scan {
+  0% { opacity: 1; }
+  50% { opacity: 0.45; }
+  100% { opacity: 1; }
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 210, 255, 1), transparent);
+  animation: scan 3s ease-in-out infinite;
+}
+header {
+  position: relative;
+}
+
+/* ── Fade in animation ── */
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-in {
-  animation: fade-in-up 0.3s ease-out;
+  animation: fade-in-up 0.25s ease-out;
 }
+
+/* ── Vue transitions ── */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -1446,24 +1571,19 @@ onUnmounted(() => {
 .fade-leave-to {
   opacity: 0;
 }
-main::-webkit-scrollbar {
-  width: 6px;
-}
-main::-webkit-scrollbar-track {
-  background: transparent;
-}
-main::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-}
+
+/* ── Scrollbars ── */
+main::-webkit-scrollbar,
 .popup-content::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
+main::-webkit-scrollbar-track,
 .popup-content::-webkit-scrollbar-track {
   background: transparent;
 }
+main::-webkit-scrollbar-thumb,
 .popup-content::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  background: rgba(0, 210, 255, 0.15);
+  border-radius: 2px;
 }
 </style>
