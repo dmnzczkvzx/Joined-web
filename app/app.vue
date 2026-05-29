@@ -90,16 +90,16 @@ const navLinks = computed(() => {
 const sidebarTitles = computed(() => {
   const map: Record<Lang, string[]> = {
     cs: [
-      'Spolupráce – úvoddd',
-      'Marketplace expanze EU',
-      'Tech stack & architektura',
-      'Integrace ERP systémů',
+      'Kdo jsme',
+      'Marketplace prodej',
+      'Jak spolupracujeme',
+      'Systémové napojení',
     ],
     en: [
-      'Cooperation – intro',
-      'EU marketplace expansion',
-      'Tech stack & architecture',
-      'ERP system integration',
+      'Who we are',
+      'Marketplace sales',
+      'How we partner',
+      'System connectivity',
     ],
   }
   return map[lang.value]
@@ -118,7 +118,7 @@ function submitForm() {
   if (!formEmail.value || !formMessage.value) return
   const subject = encodeURIComponent('Zpráva z webu / Website message')
   const body = encodeURIComponent(`From: ${formEmail.value}\n\n${formMessage.value}`)
-  window.location.href = `mailto:hello@xyz.cz?subject=${subject}&body=${body}`
+  window.location.href = `mailto:hello@joined.cz?subject=${subject}&body=${body}`
   formEmail.value = ''
   formMessage.value = ''
   formOpen.value = false
@@ -129,98 +129,90 @@ function submitForm() {
 function getInitialMessage(chatIndex: number): Message {
   const allMessages: Record<Lang, string[]> = {
     cs: [
-      // ── Chat 0: Spolupráce – úvoddd ──
+      // ── Chat 0: Kdo jsme ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Joined.cz s.r.o.</h2>
-          <p class="text-cyan-400 text-sm font-medium">E-commerce · Technologie · Marketplace Operations</p>
+          <p class="text-cyan-400 text-sm font-medium">E-commerce · Obchodní partner · CZ / DE / AT / PL / NL</p>
         </div>
-        <p>Jsme technologická firma zaměřená na <strong>e-commerce</strong> a <strong>online prodej</strong>.
-           Budujeme a provozujeme obchodní kanály – od vlastních e-shopů po mezinárodní marketplace platformy.</p>
-        <p>Propojujeme technologie, data a obchodní strategii do fungujícího celku.
-           Pokud hledáte partnera pro online expanzi, jste na správném místě. 👇</p>
+        <p>Jsme <strong>obchodní firma</strong> z IT a startupové komunity — nakupujeme, prodáváme a provozujeme vlastní prodejní kanály na marketplace platformách ve střední a západní Evropě.</p>
+        <p>Za námi stojí roky reálné praxe v e-commerce — vlastní e-shopy, online marketing, systémová napojení, marketplace operace. Pracujeme s produkty z různých kategorií: elektronika, sport, domácnost, automotive, hobby, zahrada i průmyslové zboží. Víme, kde je poptávka a kde se dá vydělat.</p>
+        <p>Hledáme dobré produkty a dobré podmínky — ať už chcete jednoduše prodávat nám, nebo stavět společný obchod. Dohodnem se rychle. 👇</p>
       </div>`,
 
-      // ── Chat 1: Marketplace expanze EU ──
+      // ── Chat 1: Marketplace prodej ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">Marketplace expanze EU</h2>
-          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · bol.com</p>
+          <h2 class="text-2xl font-bold text-white mb-2">Marketplace prodej v Evropě</h2>
+          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · Bol.com · Alza · Mall</p>
         </div>
-        <p>Pomáháme značkám <strong>expandovat na evropské marketplace platformy</strong>.
-           Od analýzy trhu přes listing až po logistiku a zákaznický servis.</p>
-        <p>Aktuálně spravujeme prodej na <strong>15+ platformách v 8 zemích EU</strong>.
-           Zeptejte se na cokoliv ohledně marketplace strategie. 👇</p>
+        <p>Prodáváme na hlavních evropských marketplace platformách — primárně v <strong>CZ, DE, AT, PL a NL</strong>.</p>
+        <p>Každý vstup předchází důkladný průzkum: víme, jaké jsou ceny konkurence, kde je poptávka a kde je prostor. Ceny a stavy skladu jsme schopni aktualizovat skoro v reálném čase — nezaspíme výprodej ani výkyv trhu.</p>
+        <p>Zeptejte se na konkrétní platformy, trhy nebo kategorie. 👇</p>
       </div>`,
 
-      // ── Chat 2: Tech stack & architektura ──
+      // ── Chat 2: Jak spolupracujeme ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">Tech stack & architektura</h2>
-          <p class="text-cyan-400 text-sm font-medium">Vue · Node.js · AWS · PostgreSQL</p>
+          <h2 class="text-2xl font-bold text-white mb-2">Jak spolupracujeme</h2>
+          <p class="text-cyan-400 text-sm font-medium">Jeden meeting · Rychlý start · Bez zbytečné byrokracie</p>
         </div>
-        <p>Stavíme na <strong>moderních technologiích</strong> s důrazem na škálovatelnost,
-           výkon a rychlost nasazení. Žádný legacy – čistý, udržovatelný kód.</p>
-        <p>Tady se dozvíte víc o tom, jak přistupujeme k <strong>vývoji a infrastruktuře</strong>. 👇</p>
+        <p>Vše dohodnem na <strong>jednom meetingu</strong>. Řeknete nám, co máte, za kolik a za jakých podmínek — my řekneme, jestli to dává smysl a jak chceme spolupracovat. Žádné složité onboardingy.</p>
+        <p>Můžeme být jednoduše vaším odběratelem, nebo můžeme stavět komplexnější model — nákup-prodej, fulfillment, replenishment, flash sale, sezónní kampaně. Rozhodnutí je vždy na obou stranách. 👇</p>
       </div>`,
 
-      // ── Chat 3: Integrace ERP systémů ──
+      // ── Chat 3: Systémové napojení ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">Integrace ERP systémů</h2>
-          <p class="text-cyan-400 text-sm font-medium">SAP · Pohoda · Money S3 · BaseLinker</p>
+          <h2 class="text-2xl font-bold text-white mb-2">Systémové napojení</h2>
+          <p class="text-cyan-400 text-sm font-medium">Napojíme cokoliv · Vy se nemusíte starat · Vyřešíme s vaším IT</p>
         </div>
-        <p>Propojujeme <strong>ERP, WMS, PIM a e-commerce platformy</strong> do jednoho
-           fungujícího ekosystému. Obousměrná synchronizace, real-time data.</p>
-        <p>Zjistěte, jak řešíme integrace a kolik času vám můžeme ušetřit. 👇</p>
+        <p>Systémové napojení řešíme za vás — <strong>stačí nám kontakt na vašeho ajťáka nebo IT dodavatele</strong> a my s ním domluvíme vše technické přímo, bez vašeho zapojení.</p>
+        <p>Výsledek: vaše ceny, skladové zásoby a objednávky se synchronizují automaticky mezi vaším systémem a marketplace platformami. Bez ruční práce, bez chyb, bez zpoždění. 👇</p>
       </div>`,
     ],
 
     en: [
-      // ── Chat 0: Cooperation – intro ──
+      // ── Chat 0: Who we are ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Joined.cz s.r.o.</h2>
-          <p class="text-cyan-400 text-sm font-medium">E-commerce · Technology · Marketplace Operations</p>
+          <p class="text-cyan-400 text-sm font-medium">E-commerce · Business partner · CZ / DE / AT / PL / NL</p>
         </div>
-        <p>We are a technology company focused on <strong>e-commerce</strong> and <strong>online sales</strong>.
-           We build and operate sales channels – from custom e-shops to international marketplace platforms.</p>
-        <p>We connect technology, data, and business strategy into a working whole.
-           If you're looking for a partner for online expansion, you're in the right place. 👇</p>
+        <p>We are a <strong>trading company</strong> from the IT and startup community — we buy, we sell, and we operate our own sales channels on marketplace platforms across Central and Western Europe.</p>
+        <p>Behind us are years of real-world e-commerce experience — running e-shops, online marketing, system integrations, marketplace operations. We work across product categories: electronics, sports, home, automotive, hobby, garden and industrial goods. We know where the demand is and where margins hold.</p>
+        <p>We're looking for good products and good terms — whether you want to simply sell to us, or build something together. We move fast. 👇</p>
       </div>`,
 
-      // ── Chat 1: EU marketplace expansion ──
+      // ── Chat 1: Marketplace sales ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">EU Marketplace Expansion</h2>
-          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · bol.com</p>
+          <h2 class="text-2xl font-bold text-white mb-2">Marketplace Sales in Europe</h2>
+          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · Bol.com · Alza · Mall</p>
         </div>
-        <p>We help brands <strong>expand to European marketplace platforms</strong>.
-           From market analysis through listing to logistics and customer service.</p>
-        <p>We currently manage sales on <strong>15+ platforms across 8 EU countries</strong>.
-           Ask us anything about marketplace strategy. 👇</p>
+        <p>We sell on major European marketplace platforms — primarily in <strong>CZ, DE, AT, PL and NL</strong>.</p>
+        <p>Every market entry is preceded by thorough research: we know competitor prices, where demand is and where there's room. We can update prices and inventory near real-time — we don't miss a flash sale or a market shift.</p>
+        <p>Ask about specific platforms, markets or categories. 👇</p>
       </div>`,
 
-      // ── Chat 2: Tech stack & architecture ──
+      // ── Chat 2: How we partner ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">Tech Stack & Architecture</h2>
-          <p class="text-cyan-400 text-sm font-medium">Vue · Node.js · AWS · PostgreSQL</p>
+          <h2 class="text-2xl font-bold text-white mb-2">How we partner</h2>
+          <p class="text-cyan-400 text-sm font-medium">One meeting · Fast start · No unnecessary bureaucracy</p>
         </div>
-        <p>We build on <strong>modern technologies</strong> with a focus on scalability,
-           performance, and deployment speed. No legacy – clean, maintainable code.</p>
-        <p>Learn more about how we approach <strong>development and infrastructure</strong>. 👇</p>
+        <p>Everything gets agreed in <strong>one meeting</strong>. Tell us what you have, at what price, and under what terms — we'll say whether it makes sense and how we want to work together. No complex onboarding.</p>
+        <p>We can be your straightforward buyer, or we can build something more structured — buy-sell, fulfillment, replenishment, flash sales, seasonal campaigns. The decision is always on both sides. 👇</p>
       </div>`,
 
-      // ── Chat 3: ERP system integration ──
+      // ── Chat 3: System connectivity ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">ERP System Integration</h2>
-          <p class="text-cyan-400 text-sm font-medium">SAP · Pohoda · Money S3 · BaseLinker</p>
+          <h2 class="text-2xl font-bold text-white mb-2">System connectivity</h2>
+          <p class="text-cyan-400 text-sm font-medium">We connect anything · You don't need to worry · We'll sort it with your IT</p>
         </div>
-        <p>We connect <strong>ERP, WMS, PIM and e-commerce platforms</strong> into one
-           working ecosystem. Bidirectional sync, real-time data.</p>
-        <p>Find out how we handle integrations and how much time we can save you. 👇</p>
+        <p>We handle the technical side for you — <strong>just give us your IT contact or system provider</strong> and we'll coordinate everything directly with them, without pulling you in.</p>
+        <p>The result: your prices, stock levels and orders sync automatically between your system and the marketplace platforms. No manual work, no errors, no delays. 👇</p>
       </div>`,
     ],
   }
@@ -232,69 +224,71 @@ function getInitialMessage(chatIndex: number): Message {
 function getChipsForChat(chatIndex: number): Chip[] {
   const allSets: Record<Lang, Chip[][]> = {
     cs: [
-      // ── Chat 0: Spolupráce – úvoddd ──
+      // ── Chat 0: Kdo jsme ──
       [
         {
-          id: 'specialization',
-          label: 'Na co se specializujeme?',
-          sublabel: 'E-commerce, integrace, marketplace',
+          id: 'what-we-do',
+          label: 'Co přesně děláme?',
+          sublabel: 'Sales na marketplace a e-shopech',
           response: `
             <div class="space-y-3">
-              <p>Náš focus stojí na třech pilířích:</p>
+              <p>Naším hlavním businessem je <strong>technický sales</strong> — prodej produktů partnerů na evropských marketplace platformách a e-shopech:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🛒 <strong>E-commerce operations</strong> – Stavíme a provozujeme e-shopy. Od výběru platformy po fulfillment.</li>
-                <li>🔗 <strong>Systémové integrace</strong> – Propojujeme ERP, WMS, PIM a další systémy do jednoho ekosystému.</li>
-                <li>🌍 <strong>Marketplace management</strong> – Prodej na Amazon, Kaufland, Allegro, bol.com a dalších platformách v EU.</li>
+                <li>🛒 <strong>Marketplace sales</strong> – Amazon, Kaufland, Allegro, Bol.com, Alza a další v EU</li>
+                <li>🏪 <strong>E-shop operace</strong> – provoz vlastních obchodních kanálů</li>
+                <li>🔗 <strong>Systémové napojení</strong> – ERP integrace, feed management, middleware</li>
+                <li>🌍 <strong>Aktivní trhy</strong> – CZ, DE, AT, PL, NL</li>
               </ul>
-              <p>Netvoříme jen weby – budujeme celý <strong>technologický backbone</strong> pro online prodej.</p>
+              <p>Pracujeme s různými business modely — <strong>dropshipping, nákup-prodej, longtail</strong>. Zvolíme to, co dává smysl pro konkrétní produkt a trh.</p>
             </div>`,
         },
         {
           id: 'experience',
           label: 'Jakou máme zkušenost?',
-          sublabel: 'Zahraniční trhy, projekty',
+          sublabel: 'E-commerce, integrace, trhy',
           response: `
             <div class="space-y-3">
-              <p>Tým za XYX má roky zkušeností ze startupů a e-commerce firem na evropských trzích:</p>
+              <p>Za námi stojí roky praxe napříč celým e-commerce stackem:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📦 Řízení prodeje na <strong>15+ marketplace platformách</strong> v EU</li>
-                <li>⚙️ Integrace <strong>ERP / WMS / PIM</strong> systémů</li>
-                <li>🇩🇪🇳🇱🇵🇱 Přímá zkušenost s trhy <strong>DE, NL, PL, AT, FR</strong></li>
-                <li>📊 Data-driven přístup – automatizace, reporting, optimalizace</li>
+                <li>📦 <strong>Marketplace operace</strong> – Amazon, Kaufland, Allegro, bol.com a další</li>
+                <li>🏗️ <strong>E-shopy</strong> – od spuštění po škálování, různé platformy a trhy</li>
+                <li>📣 <strong>Online marketing</strong> – PPC, SEO, srovnávače, feed optimalizace</li>
+                <li>⚙️ <strong>Systémové integrace</strong> – ERP (Pohoda, SAP, Money S3), BaseLinker, Mergado</li>
+                <li>🧩 <strong>Startup prostředí</strong> – umíme stavět od nuly, pracovat rychle, rozhodovat se na základě dat</li>
               </ul>
             </div>`,
         },
         {
-          id: 'tech',
-          label: 'Jaké technologie používáme?',
-          sublabel: 'Stack, nástroje, platformy',
+          id: 'cooperation-model',
+          label: 'Jak funguje spolupráce?',
+          sublabel: 'Jednoduše — jsme odběratel, ne agentura',
           response: `
             <div class="space-y-3">
-              <p>Pracujeme s moderním stackem:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Frontend:</strong> Vue.js, Nuxt</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Backend:</strong> Node.js, Python</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">E-commerce:</strong> Shopify, custom</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Integrace:</strong> BaseLinker, middleware</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Cloud:</strong> AWS, Vercel</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Data:</strong> PostgreSQL, pipelines</div>
-              </div>
-              <p>Vybíráme nástroje podle potřeb projektu, ne naopak.</p>
+              <p>Spolupráce je přímá — jsme obchodní partner, ne zprostředkovatel:</p>
+              <ul class="space-y-2 list-none pl-0">
+                <li>🤝 <strong>Přímý odběratel</strong> – nakoupíme od vás zboží a prodáváme na vlastní účet, vlastní riziko</li>
+                <li>📦 <strong>Nákup-prodej</strong> – klasický B2B obchod, fakturujete nám, my řešíme zbytek</li>
+                <li>🔄 <strong>Sdílený model</strong> – dohodnuté podmínky, vy dodáváte, my prodáváme a dělíme se o výsledek</li>
+                <li>🚀 <strong>Rychlý start</strong> – od meetingu po první objednávku typicky 2–4 týdny</li>
+              </ul>
+              <p>Nespravujeme vaše účty ani vaše produktové stránky. Kupujeme od vás a prodáváme sami — na naší zodpovědnosti.</p>
             </div>`,
         },
         {
-          id: 'cooperation',
-          label: 'Jak spolupracujeme?',
-          sublabel: 'Modely partnerství',
+          id: 'markets',
+          label: 'Kde jsme aktivní?',
+          sublabel: 'Trhy a platformy',
           response: `
             <div class="space-y-3">
-              <p>Hledáme partnery, ne klienty. Nabízíme:</p>
+              <p>Aktuálně aktivní nebo ve výhledu:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🤝 <strong>Strategické partnerství</strong> – společný vstup na nové trhy a kanály</li>
-                <li>🏷️ <strong>White-label řešení</strong> – provozujeme online prodej pod vaší značkou</li>
-                <li>⚡ <strong>Tech as a service</strong> – naše infrastruktura, vaše produkty</li>
+                <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka</li>
+                <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
+                <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
+                <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
+                <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
+                <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (ve výhledu)</li>
               </ul>
-              <p>Rádi se potkáme na kávě nebo callu – ozvěte se.</p>
             </div>`,
         },
         {
@@ -305,16 +299,16 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Nejrychlejší cesta k nám:</p>
               <div class="bg-white/4 rounded-sm p-4 space-y-2 not-prose">
-                <p class="text-gray-300">📧 <strong class="text-white">hello@xyz.cz</strong></p>
-                <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/xyz</strong></p>
+                <p class="text-gray-300">📧 <strong class="text-white">hello@joined.cz</strong></p>
+                <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
                 <p class="text-gray-300">📍 Praha, Česká republika</p>
-                <p class="text-gray-300">🏢 IČO: xxxxxxxx <span class="text-gray-500">(v procesu založení)</span></p>
+                <p class="text-gray-300">🏢 Joined.cz s.r.o.</p>
               </div>
             </div>`,
         },
       ],
 
-      // ── Chat 1: Marketplace expanze EU ──
+      // ── Chat 1: Marketplace prodej ──
       [
         {
           id: 'mp-platforms',
@@ -322,264 +316,275 @@ function getChipsForChat(chatIndex: number): Chip[] {
           sublabel: 'Amazon, Kaufland, Allegro…',
           response: `
             <div class="space-y-3">
-              <p>Aktuálně spravujeme prodej na těchto platformách:</p>
+              <p>Aktuálně aktivní nebo rozbíhané:</p>
               <ul class="space-y-2 list-none pl-0">
+                <li>🇨🇿 <strong>Alza Marketplace</strong>, Mall.cz, Heureka Košík</li>
                 <li>🇩🇪 <strong>Amazon.de</strong>, Kaufland.de, Otto.de</li>
-                <li>🇳🇱 <strong>Bol.com</strong>, Amazon.nl</li>
+                <li>🇦🇹 <strong>Amazon.at</strong>, Kaufland.at</li>
                 <li>🇵🇱 <strong>Allegro</strong>, Amazon.pl</li>
-                <li>🇫🇷 Amazon.fr, <strong>Cdiscount</strong></li>
-                <li>🇨🇿 Alza Marketplace, Mall.cz</li>
+                <li>🇳🇱 <strong>Bol.com</strong>, Amazon.nl</li>
               </ul>
-              <p>Každý marketplace má svá specifika – řešíme listing, pricing, logistics i zákaznický servis.</p>
+              <p>Každá platforma má jiná pravidla a přístup k zákazníkovi. Víme, jak na každé z nich provozovat ziskový provoz.</p>
             </div>`,
         },
         {
-          id: 'mp-expansion',
-          label: 'Jak probíhá expanze na nový trh?',
-          sublabel: 'Proces, timeline, náklady',
+          id: 'mp-models',
+          label: 'Jaké business modely používáme?',
+          sublabel: 'Dropshipping, nákup-prodej, longtail',
           response: `
             <div class="space-y-3">
-              <p>Vstup na nový marketplace typicky zahrnuje:</p>
+              <p>Přizpůsobujeme se podle produktu, marže a partnera:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📋 <strong>Analýza trhu</strong> – konkurence, cenová hladina, poptávka</li>
-                <li>📝 <strong>Registrace & onboarding</strong> – založení účtu, nastavení podmínek</li>
-                <li>📦 <strong>Logistika</strong> – FBA / FBM, lokální sklady, dopravci</li>
-                <li>🚀 <strong>Launch</strong> – listing optimalizace, PPC kampaně, reviews strategie</li>
+                <li>🚚 <strong>Dropshipping</strong> – objednávka jde přímo k vám, my řídíme prodej a zákaznický servis</li>
+                <li>📦 <strong>Nákup-prodej</strong> – nakoupíme zboží a prodáváme z vlastního skladu nebo FBA</li>
+                <li>🔎 <strong>Longtail strategie</strong> – velký katalog, menší marže na kus, objem dělá výsledek</li>
+                <li>🤝 <strong>Hybrid</strong> – kombinace modelů dle kategorie nebo trhu</li>
               </ul>
-              <p>Typický timeline je <strong>4–8 týdnů</strong> od rozhodnutí po první prodej.</p>
+              <p>Na meetingu vybereme model, který dává smysl pro vaše produkty a podmínky.</p>
             </div>`,
         },
         {
-          id: 'mp-results',
-          label: 'Jaké výsledky dosahujeme?',
-          sublabel: 'KPIs, metriky, case studies',
+          id: 'mp-products',
+          label: 'Jaké produkty prodáváme?',
+          sublabel: 'Kategorie, výběr, průzkum trhu',
           response: `
             <div class="space-y-3">
-              <p>Naše benchmarky napříč projekty:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Avg. ROAS:</strong> 4.2x</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Trhy:</strong> 8 zemí EU</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Platformy:</strong> 15+</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">SKUs:</strong> 5 000+</div>
-              </div>
-              <p>Konkrétní case studies rádi představíme na osobním callu.</p>
-            </div>`,
-        },
-        {
-          id: 'mp-pricing',
-          label: 'Cenové modely a provize',
-          sublabel: 'Jak účtujeme',
-          response: `
-            <div class="space-y-3">
-              <p>Nabízíme flexibilní cenové modely:</p>
+              <p>Pracujeme s produkty z různých kategorií — nejsme specializovaní jen na jednu oblast:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>💰 <strong>Revenue share</strong> – procento z obratu, žádné fixní poplatky</li>
-                <li>📊 <strong>Management fee</strong> – fixní měsíční správa + výkonnostní bonus</li>
-                <li>🤝 <strong>Hybrid</strong> – kombinace obou modelů dle potřeb</li>
+                <li>🔧 <strong>Nářadí, hobby & DIY</strong> – silná a stabilní poptávka napříč EU</li>
+                <li>🏠 <strong>Domácnost & zahrada</strong> – sezónní i celoroční kategorie</li>
+                <li>⚡ <strong>Elektronika & příslušenství</strong> – rychlý obrat, citlivé na cenu</li>
+                <li>🚗 <strong>Automotive & sport</strong> – longtail potenciál, méně konkurence</li>
+                <li>🏭 <strong>Průmyslové & B2B produkty</strong> – stabilní marže, opakované objednávky</li>
               </ul>
-              <p>Vše záleží na rozsahu a komplexitě projektu. Rádi připravíme nabídku na míru.</p>
+              <p>Před každým vstupem analyzujeme poptávku, ceny konkurence a potenciální marži. Nezačínáme naslepo.</p>
+            </div>`,
+        },
+        {
+          id: 'mp-onboarding',
+          label: 'Jak probíhá onboarding?',
+          sublabel: 'Od meetingu po první prodej',
+          response: `
+            <div class="space-y-3">
+              <p>Typický průběh od prvního kontaktu po spuštění:</p>
+              <ul class="space-y-2 list-none pl-0">
+                <li>1️⃣ <strong>Meeting</strong> – produkty, ceny, business model, podmínky</li>
+                <li>2️⃣ <strong>Feed / ceník</strong> – vy pošlete data, my napojíme do systémů</li>
+                <li>3️⃣ <strong>Listing</strong> – tvorba a optimalizace produktových stránek</li>
+                <li>4️⃣ <strong>Launch</strong> – spuštění na platformě, první objednávky</li>
+                <li>5️⃣ <strong>Reporting</strong> – pravidelný přehled prodejů, marží, výkonu</li>
+              </ul>
+              <p>Od meetingu po první listing typicky <strong>2–4 týdny</strong>.</p>
             </div>`,
         },
       ],
 
-      // ── Chat 2: Tech stack & architektura ──
+      // ── Chat 2: Jak spolupracujeme ──
       [
         {
-          id: 'tech-frontend',
-          label: 'Frontend & UI',
-          sublabel: 'Vue, Nuxt, design system',
+          id: 'first-meeting',
+          label: 'Jak vypadá první meeting?',
+          sublabel: 'Agenda a výstup',
           response: `
             <div class="space-y-3">
-              <p>Na frontendu stavíme na:</p>
+              <p>Na prvním meetingu projdeme vše, co potřebujeme vědět:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>⚡ <strong>Nuxt 3</strong> – SSR, SSG, hybridní rendering</li>
-                <li>🎨 <strong>Tailwind CSS</strong> – utility-first, konzistentní design</li>
-                <li>🧩 <strong>Vlastní komponentový systém</strong> – znovupoužitelné UI bloky</li>
+                <li>📋 <strong>Váš katalog</strong> – jaké produkty, kategorie, ceny</li>
+                <li>🌍 <strong>Cílové trhy</strong> – kde chcete nebo kde vidíme příležitost</li>
+                <li>📦 <strong>Business model</strong> – dropshipping / nákup-prodej / longtail</li>
+                <li>💰 <strong>Cenové podmínky</strong> – výkupní ceny, marže, revenue share</li>
+                <li>🔗 <strong>Logistika</strong> – expedice z vaší strany nebo z naší / FBA</li>
               </ul>
-              <p>Důraz klademe na <strong>performance</strong>, přístupnost a rychlost nasazení.</p>
+              <p>Výstup meetingu: jasná dohoda nebo konkrétní next steps. Bez zbytečného táhnutí.</p>
             </div>`,
         },
         {
-          id: 'tech-backend',
-          label: 'Backend & API',
-          sublabel: 'Node.js, Python, databáze',
+          id: 'partner-requirements',
+          label: 'Co potřebujeme od partnera?',
+          sublabel: 'Jako každý odběratel',
           response: `
             <div class="space-y-3">
-              <p>Backend infrastruktura:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Runtime:</strong> Node.js, Python</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">API:</strong> REST, GraphQL</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">DB:</strong> PostgreSQL, Redis</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Queue:</strong> BullMQ, SQS</div>
-              </div>
-              <p>Vše běží na <strong>AWS</strong> s CI/CD přes GitHub Actions.</p>
+              <p>Jako od každého dodavatele — nic víc, nic míň:</p>
+              <ul class="space-y-2 list-none pl-0">
+                <li>📄 <strong>Ceník nebo nabídkový list</strong> – nákupní ceny, MOQ, případně EAN kódy</li>
+                <li>📦 <strong>Dodací podmínky</strong> – sklady, lead time, minimální objednávky</li>
+                <li>💳 <strong>Platební podmínky</strong> – splatnost, způsob fakturace</li>
+                <li>✅ <strong>Reklamační a vrátky</strong> – postup při vadném zboží nebo vrácení od zákazníka</li>
+              </ul>
+              <p>Technické věci jako produktové fotky nebo popisky si dokážeme obstarat sami. Potřebujeme hlavně vědět, za kolik a za jakých podmínek.</p>
             </div>`,
         },
         {
-          id: 'tech-infra',
-          label: 'Cloud & infrastruktura',
-          sublabel: 'AWS, Vercel, monitoring',
+          id: 'business-models',
+          label: 'Modely a typy spolupráce',
+          sublabel: 'Fulfillment, replenishment, flash sale…',
           response: `
             <div class="space-y-3">
-              <p>Naše cloudová architektura:</p>
+              <p>Rozumíme všem standardním modelům v e-commerce — přizpůsobíme se vašim potřebám:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>☁️ <strong>AWS</strong> – EC2, Lambda, RDS, S3, CloudFront</li>
-                <li>🚀 <strong>Vercel</strong> – frontend deployment, edge functions</li>
-                <li>📈 <strong>Monitoring</strong> – Datadog, Sentry, custom dashboards</li>
-                <li>🔒 <strong>Security</strong> – WAF, secrets management, audit logs</li>
+                <li>📦 <strong>Přímý nákup</strong> – nakoupíme od vás, prodáváme na vlastní účet a vlastní riziko</li>
+                <li>🚚 <strong>Consignment / dropshipping</strong> – zboží expedujete vy na naši objednávku</li>
+                <li>🏭 <strong>Fulfillment</strong> – vaše zboží na našem nebo FBA skladě, my řídíme prodej</li>
+                <li>🔄 <strong>Replenishment</strong> – pravidelné nákupy dle prodejů a sezóny</li>
+                <li>⚡ <strong>Flash sale / výprodeje</strong> – odkoupíme přebytky nebo sezónní zboží</li>
+                <li>📅 <strong>Sezónní kampaně</strong> – dohodnutý objem na Black Friday, Vánoce, sezónu</li>
+                <li>🎁 <strong>Bundle deals</strong> – nakoupíme komplementární produkty a prodáváme jako set</li>
+                <li>🔎 <strong>Longtail</strong> – velký katalog, pravidelné menší objednávky, stabilní obrat</li>
               </ul>
             </div>`,
         },
         {
-          id: 'tech-approach',
-          label: 'Jak přistupujeme k vývoji?',
-          sublabel: 'Metodika, procesy',
+          id: 'our-scope',
+          label: 'Co je na naší straně?',
+          sublabel: 'Vše — to je náš business',
           response: `
             <div class="space-y-3">
-              <p>Principy, kterými se řídíme:</p>
+              <p>Jakmile máme zboží, vše ostatní je naše starost — ne vaše:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🔄 <strong>Iterativní vývoj</strong> – krátké cykly, rychlé nasazení</li>
-                <li>🧪 <strong>Testy</strong> – unit, integration, e2e</li>
-                <li>📖 <strong>Dokumentace</strong> – API docs, runbooks, ADR</li>
-                <li>🤖 <strong>Automatizace</strong> – CI/CD, IaC, code quality gates</li>
+                <li>🗂️ <strong>Produktové stránky</strong> – listing, fotky, texty, lokalizace do cílového jazyka</li>
+                <li>💶 <strong>Pricing</strong> – nastavení a průběžná optimalizace cen dle trhu a konkurence</li>
+                <li>📣 <strong>Reklama</strong> – PPC kampaně na platformách, kde to má smysl</li>
+                <li>📞 <strong>Zákaznický servis</strong> – komunikace se zákazníky, reklamace, vrácení zboží</li>
+                <li>📊 <strong>Reporting</strong> – pravidelný přehled obratu a výkonu, pokud o něj stojíte</li>
               </ul>
-              <p>Neděláme waterfall. Stavíme, měříme, iterujeme.</p>
+              <p>Nespravujeme váš účet. Máme vlastní — a staráme se o něj sami.</p>
             </div>`,
         },
       ],
 
-      // ── Chat 3: Integrace ERP systémů ──
+      // ── Chat 3: Systémové napojení ──
       [
         {
-          id: 'erp-systems',
-          label: 'Jaké ERP systémy integrujeme?',
-          sublabel: 'SAP, Pohoda, Money S3…',
+          id: 'how-it-works',
+          label: 'Jak napojení funguje?',
+          sublabel: 'Jednoduše — řešíme to za vás',
           response: `
             <div class="space-y-3">
-              <p>Máme zkušenosti s integrací:</p>
+              <p>Celý proces je jednoduchý — technické detaily jsou naše starost:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🏢 <strong>SAP Business One</strong> – B2B i B2C scénáře</li>
-                <li>📗 <strong>Pohoda</strong> – české e-commerce projekty</li>
-                <li>💼 <strong>Money S3 / S5</strong> – středně velké firmy</li>
-                <li>🌐 <strong>Vlastní systémy</strong> – custom API napojení</li>
+                <li>1️⃣ <strong>Dohodnem spolupráci</strong> – produkty, ceny, podmínky</li>
+                <li>2️⃣ <strong>Vy nám dáte kontakt</strong> na vašeho ajťáka nebo IT dodavatele</li>
+                <li>3️⃣ <strong>My si domluvíme s ním</strong> vše technické — napojení, přístupy, testování</li>
+                <li>4️⃣ <strong>Vy dostanete výsledek</strong> – automatická synchronizace bez ruční práce</li>
               </ul>
-              <p>Klíčové je vždy <strong>obousměrná synchronizace</strong> – objednávky, skladové zásoby, faktury.</p>
+              <p>Nemusíte rozumět tomu, jak to funguje pod kapotou. Stačí, že to funguje.</p>
             </div>`,
         },
         {
-          id: 'erp-middleware',
-          label: 'Jak funguje middleware vrstva?',
-          sublabel: 'BaseLinker, vlastní řešení',
+          id: 'what-we-need',
+          label: 'Co od vás potřebujeme?',
+          sublabel: 'Minimum z vaší strany',
           response: `
             <div class="space-y-3">
-              <p>Mezi e-shopem / marketplace a ERP stojí naše middleware:</p>
+              <p>Ze strany IT potřebujeme skutečně minimum:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🔗 <strong>BaseLinker</strong> – rychlé napojení na 100+ platforem</li>
-                <li>⚙️ <strong>Custom middleware</strong> – pro složitější business logiku</li>
-                <li>🔄 <strong>Real-time sync</strong> – webhooky, polling, event-driven</li>
+                <li>📞 <strong>Kontakt na vašeho ajťáka</strong> – interní IT nebo dodavatel systému</li>
+                <li>🔑 <strong>Přístupy k systému</strong> – váš IT člověk ví, co to znamená</li>
+                <li>📋 <strong>Základní info o datech</strong> – co máte v systému (ceny, sklad, produkty)</li>
               </ul>
-              <p>Volíme podle komplexity — jednodušší projekty = BaseLinker, enterprise = custom.</p>
+              <p>Zbytek — způsob napojení, testování, spuštění — vyřešíme s vaším IT bez vašeho zapojení.</p>
             </div>`,
         },
         {
-          id: 'erp-data',
-          label: 'Datové toky a synchronizace',
-          sublabel: 'Objednávky, sklad, ceny',
+          id: 'what-syncs',
+          label: 'Co se synchronizuje automaticky?',
+          sublabel: 'Ceny, sklad, objednávky',
           response: `
             <div class="space-y-3">
-              <p>Typické datové toky, které řešíme:</p>
+              <p>Po napojení běží vše samo:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Objednávky:</strong> MP → ERP</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Sklad:</strong> ERP → MP</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Ceny:</strong> PIM → MP</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Faktury:</strong> ERP → email</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Ceny:</strong> váš systém → marketplace</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Sklad:</strong> aktuální stav skoro v reálném čase</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Objednávky:</strong> marketplace → váš systém</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Faktury:</strong> automaticky zákazníkovi</div>
               </div>
-              <p>Vše s <strong>error handling</strong>, retry logikou a notifikacemi při výpadcích.</p>
+              <p>Když se změní cena nebo dostupnost u vás, marketplace to ví skoro okamžitě.</p>
             </div>`,
         },
         {
-          id: 'erp-timeline',
-          label: 'Jak dlouho integrace trvá?',
-          sublabel: 'Timeline, fáze projektu',
+          id: 'integration-timeline',
+          label: 'Jak dlouho napojení trvá?',
+          sublabel: 'Od dohody po spuštění',
           response: `
             <div class="space-y-3">
-              <p>Typický projekt integrace:</p>
+              <p>Záleží na vašem systému, ale zpravidla:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📋 <strong>Analýza</strong> (1–2 týdny) – mapování procesů, datový audit</li>
-                <li>🛠️ <strong>Vývoj</strong> (3–6 týdnů) – napojení, transformace, testy</li>
-                <li>🧪 <strong>UAT</strong> (1–2 týdny) – testování s reálnými daty</li>
-                <li>🚀 <strong>Go-live</strong> – nasazení, monitoring, podpora</li>
+                <li>⚡ <strong>Ceník v tabulce nebo souboru</strong> – 1–2 týdny</li>
+                <li>📦 <strong>Standardní účetní systém</strong> (Pohoda, Money, vlastní ERP) – 2–4 týdny</li>
+                <li>🏢 <strong>Komplexnější systém</strong> (SAP, více skladů, custom) – 4–8 týdnů</li>
               </ul>
-              <p>Celkově <strong>6–10 týdnů</strong> dle komplexity. Jednoduchá napojení i za 2 týdny.</p>
+              <p>Pošlete nám kontakt na vašeho ajťáka a my vám dáme konkrétní odhad do 48 hodin.</p>
             </div>`,
         },
       ],
     ],
 
     en: [
-      // ── Chat 0: Cooperation – intro ──
+      // ── Chat 0: Who we are ──
       [
         {
-          id: 'specialization',
-          label: 'What do we specialize in?',
-          sublabel: 'E-commerce, integrations, marketplace',
+          id: 'what-we-do',
+          label: 'What exactly do we do?',
+          sublabel: 'Sales on marketplaces and e-shops',
           response: `
             <div class="space-y-3">
-              <p>Our focus stands on three pillars:</p>
+              <p>Our core business is <strong>technical sales</strong> — selling partner products on European marketplace platforms and e-shops:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🛒 <strong>E-commerce operations</strong> – We build and run e-shops. From platform selection to fulfillment.</li>
-                <li>🔗 <strong>System integrations</strong> – We connect ERP, WMS, PIM and other systems into one ecosystem.</li>
-                <li>🌍 <strong>Marketplace management</strong> – Sales on Amazon, Kaufland, Allegro, bol.com and other EU platforms.</li>
+                <li>🛒 <strong>Marketplace sales</strong> – Amazon, Kaufland, Allegro, Bol.com, Alza and more across EU</li>
+                <li>🏪 <strong>E-shop operations</strong> – running our own sales channels</li>
+                <li>🔗 <strong>System connectivity</strong> – ERP integrations, feed management, middleware</li>
+                <li>🌍 <strong>Active markets</strong> – CZ, DE, AT, PL, NL</li>
               </ul>
-              <p>We don't just build websites – we build the entire <strong>technology backbone</strong> for online sales.</p>
+              <p>We work with various business models — <strong>dropshipping, buy-sell, longtail</strong>. We pick what makes sense for the specific product and market.</p>
             </div>`,
         },
         {
           id: 'experience',
           label: 'What is our experience?',
-          sublabel: 'International markets, projects',
+          sublabel: 'E-commerce, integrations, markets',
           response: `
             <div class="space-y-3">
-              <p>The team behind XYX has years of experience from startups and e-commerce companies across European markets:</p>
+              <p>Behind us are years of hands-on experience across the full e-commerce stack:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📦 Managing sales on <strong>15+ marketplace platforms</strong> in the EU</li>
-                <li>⚙️ Integration of <strong>ERP / WMS / PIM</strong> systems</li>
-                <li>🇩🇪🇳🇱🇵🇱 Direct experience with <strong>DE, NL, PL, AT, FR</strong> markets</li>
-                <li>📊 Data-driven approach – automation, reporting, optimization</li>
+                <li>📦 <strong>Marketplace operations</strong> – Amazon, Kaufland, Allegro, bol.com and others</li>
+                <li>🏗️ <strong>E-shops</strong> – from launch to scaling, across platforms and markets</li>
+                <li>📣 <strong>Online marketing</strong> – PPC, SEO, price comparison sites, feed optimization</li>
+                <li>⚙️ <strong>System integrations</strong> – ERP (Pohoda, SAP, Money S3), BaseLinker, Mergado</li>
+                <li>🧩 <strong>Startup environment</strong> – we know how to build from scratch, move fast, and decide based on data</li>
               </ul>
             </div>`,
         },
         {
-          id: 'tech',
-          label: 'What technologies do we use?',
-          sublabel: 'Stack, tools, platforms',
+          id: 'cooperation-model',
+          label: 'How does cooperation work?',
+          sublabel: 'Simple — we\'re a buyer, not an agency',
           response: `
             <div class="space-y-3">
-              <p>We work with a modern stack:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Frontend:</strong> Vue.js, Nuxt</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Backend:</strong> Node.js, Python</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">E-commerce:</strong> Shopify, custom</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Integrations:</strong> BaseLinker, middleware</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Cloud:</strong> AWS, Vercel</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Data:</strong> PostgreSQL, pipelines</div>
-              </div>
-              <p>We choose tools based on project needs, not the other way around.</p>
+              <p>Straightforward — we're a business partner, not a middleman:</p>
+              <ul class="space-y-2 list-none pl-0">
+                <li>🤝 <strong>Direct buyer</strong> – we purchase from you and sell on our own account, our own risk</li>
+                <li>📦 <strong>Buy-sell</strong> – classic B2B trade, you invoice us, we handle the rest</li>
+                <li>🔄 <strong>Shared model</strong> – agreed terms, you supply, we sell and share the result</li>
+                <li>🚀 <strong>Fast start</strong> – from meeting to first order typically 2–4 weeks</li>
+              </ul>
+              <p>We don't manage your accounts or your product pages. We buy from you and sell ourselves — on our responsibility.</p>
             </div>`,
         },
         {
-          id: 'cooperation',
-          label: 'How do we cooperate?',
-          sublabel: 'Partnership models',
+          id: 'markets',
+          label: 'Where are we active?',
+          sublabel: 'Markets and platforms',
           response: `
             <div class="space-y-3">
-              <p>We look for partners, not clients. We offer:</p>
+              <p>Currently active or in pipeline:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🤝 <strong>Strategic partnership</strong> – joint entry into new markets and channels</li>
-                <li>🏷️ <strong>White-label solutions</strong> – we run online sales under your brand</li>
-                <li>⚡ <strong>Tech as a service</strong> – our infrastructure, your products</li>
+                <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka</li>
+                <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
+                <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
+                <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
+                <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
+                <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (upcoming)</li>
               </ul>
-              <p>We'd love to meet over coffee or a call – get in touch.</p>
             </div>`,
         },
         {
@@ -590,16 +595,16 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>The fastest way to reach us:</p>
               <div class="bg-white/4 rounded-sm p-4 space-y-2 not-prose">
-                <p class="text-gray-300">📧 <strong class="text-white">hello@xyz.cz</strong></p>
-                <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/xyz</strong></p>
+                <p class="text-gray-300">📧 <strong class="text-white">hello@joined.cz</strong></p>
+                <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
                 <p class="text-gray-300">📍 Prague, Czech Republic</p>
-                <p class="text-gray-300">🏢 ID: xxxxxxxx <span class="text-gray-500">(registration in progress)</span></p>
+                <p class="text-gray-300">🏢 Joined.cz s.r.o.</p>
               </div>
             </div>`,
         },
       ],
 
-      // ── Chat 1: EU marketplace expansion ──
+      // ── Chat 1: Marketplace sales ──
       [
         {
           id: 'mp-platforms',
@@ -607,195 +612,204 @@ function getChipsForChat(chatIndex: number): Chip[] {
           sublabel: 'Amazon, Kaufland, Allegro…',
           response: `
             <div class="space-y-3">
-              <p>We currently manage sales on these platforms:</p>
+              <p>Currently active or ramping up:</p>
               <ul class="space-y-2 list-none pl-0">
+                <li>🇨🇿 <strong>Alza Marketplace</strong>, Mall.cz, Heureka Košík</li>
                 <li>🇩🇪 <strong>Amazon.de</strong>, Kaufland.de, Otto.de</li>
-                <li>🇳🇱 <strong>Bol.com</strong>, Amazon.nl</li>
+                <li>🇦🇹 <strong>Amazon.at</strong>, Kaufland.at</li>
                 <li>🇵🇱 <strong>Allegro</strong>, Amazon.pl</li>
-                <li>🇫🇷 Amazon.fr, <strong>Cdiscount</strong></li>
-                <li>🇨🇿 Alza Marketplace, Mall.cz</li>
+                <li>🇳🇱 <strong>Bol.com</strong>, Amazon.nl</li>
               </ul>
-              <p>Each marketplace has its specifics – we handle listing, pricing, logistics, and customer service.</p>
+              <p>Each platform has different rules and customer service standards. We know how to run profitable operations on all of them.</p>
             </div>`,
         },
         {
-          id: 'mp-expansion',
-          label: 'How does market expansion work?',
-          sublabel: 'Process, timeline, costs',
+          id: 'mp-models',
+          label: 'What business models do we use?',
+          sublabel: 'Dropshipping, buy-sell, longtail',
           response: `
             <div class="space-y-3">
-              <p>Entering a new marketplace typically involves:</p>
+              <p>We adapt to the product, margin, and partner:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📋 <strong>Market analysis</strong> – competition, pricing, demand</li>
-                <li>📝 <strong>Registration & onboarding</strong> – account setup, terms</li>
-                <li>📦 <strong>Logistics</strong> – FBA / FBM, local warehouses, carriers</li>
-                <li>🚀 <strong>Launch</strong> – listing optimization, PPC campaigns, reviews strategy</li>
+                <li>🚚 <strong>Dropshipping</strong> – orders go directly to you, we handle sales and customer service</li>
+                <li>📦 <strong>Buy-sell</strong> – we purchase stock and sell from our own warehouse or FBA</li>
+                <li>🔎 <strong>Longtail strategy</strong> – large catalog, lower per-unit margin, volume drives results</li>
+                <li>🤝 <strong>Hybrid</strong> – combination of models depending on category or market</li>
               </ul>
-              <p>Typical timeline is <strong>4–8 weeks</strong> from decision to first sale.</p>
+              <p>We'll choose the model that makes sense for your products and terms.</p>
             </div>`,
         },
         {
-          id: 'mp-results',
-          label: 'What results do we achieve?',
-          sublabel: 'KPIs, metrics, case studies',
+          id: 'mp-products',
+          label: 'What products do we sell?',
+          sublabel: 'Categories, selection, market research',
           response: `
             <div class="space-y-3">
-              <p>Our benchmarks across projects:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Avg. ROAS:</strong> 4.2x</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Markets:</strong> 8 EU countries</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Platforms:</strong> 15+</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">SKUs:</strong> 5,000+</div>
-              </div>
-              <p>We're happy to present specific case studies on a personal call.</p>
-            </div>`,
-        },
-        {
-          id: 'mp-pricing',
-          label: 'Pricing models & fees',
-          sublabel: 'How we charge',
-          response: `
-            <div class="space-y-3">
-              <p>We offer flexible pricing models:</p>
+              <p>We work across product categories — we're not limited to one segment:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>💰 <strong>Revenue share</strong> – percentage of turnover, no fixed fees</li>
-                <li>📊 <strong>Management fee</strong> – fixed monthly fee + performance bonus</li>
-                <li>🤝 <strong>Hybrid</strong> – combination of both models as needed</li>
+                <li>🔧 <strong>Tools, hobby & DIY</strong> – strong and stable demand across EU</li>
+                <li>🏠 <strong>Home & garden</strong> – seasonal and year-round categories</li>
+                <li>⚡ <strong>Electronics & accessories</strong> – fast turnover, price-sensitive</li>
+                <li>🚗 <strong>Automotive & sports</strong> – longtail potential, less competition</li>
+                <li>🏭 <strong>Industrial & B2B goods</strong> – stable margins, repeat orders</li>
               </ul>
-              <p>Everything depends on the scope and complexity. We'll gladly prepare a custom offer.</p>
+              <p>Before every launch we analyse demand, competitor pricing and potential margin. We don't go in blind.</p>
+            </div>`,
+        },
+        {
+          id: 'mp-onboarding',
+          label: 'How does onboarding work?',
+          sublabel: 'From meeting to first sale',
+          response: `
+            <div class="space-y-3">
+              <p>Typical flow from first contact to launch:</p>
+              <ul class="space-y-2 list-none pl-0">
+                <li>1️⃣ <strong>Meeting</strong> – products, pricing, business model, terms</li>
+                <li>2️⃣ <strong>Feed / price list</strong> – you send the data, we connect it to our systems</li>
+                <li>3️⃣ <strong>Listing</strong> – creation and optimization of product pages</li>
+                <li>4️⃣ <strong>Launch</strong> – going live on the platform, first orders</li>
+                <li>5️⃣ <strong>Reporting</strong> – regular overview of sales, margins, performance</li>
+              </ul>
+              <p>From meeting to first listing typically <strong>2–4 weeks</strong>.</p>
             </div>`,
         },
       ],
 
-      // ── Chat 2: Tech stack & architecture ──
+      // ── Chat 2: How we partner ──
       [
         {
-          id: 'tech-frontend',
-          label: 'Frontend & UI',
-          sublabel: 'Vue, Nuxt, design system',
+          id: 'first-meeting',
+          label: 'What does the first meeting look like?',
+          sublabel: 'Agenda and outcome',
           response: `
             <div class="space-y-3">
-              <p>On the frontend we build with:</p>
+              <p>In the first meeting we cover everything we need to know:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>⚡ <strong>Nuxt 3</strong> – SSR, SSG, hybrid rendering</li>
-                <li>🎨 <strong>Tailwind CSS</strong> – utility-first, consistent design</li>
-                <li>🧩 <strong>Custom component system</strong> – reusable UI blocks</li>
+                <li>📋 <strong>Your catalog</strong> – what products, categories, prices</li>
+                <li>🌍 <strong>Target markets</strong> – where you want to be or where we see opportunity</li>
+                <li>📦 <strong>Business model</strong> – dropshipping / buy-sell / longtail</li>
+                <li>💰 <strong>Pricing terms</strong> – wholesale prices, margin, revenue share</li>
+                <li>🔗 <strong>Logistics</strong> – fulfillment from your side or ours / FBA</li>
               </ul>
-              <p>We focus on <strong>performance</strong>, accessibility, and deployment speed.</p>
+              <p>Meeting outcome: a clear agreement or concrete next steps. No unnecessary dragging.</p>
             </div>`,
         },
         {
-          id: 'tech-backend',
-          label: 'Backend & API',
-          sublabel: 'Node.js, Python, databases',
+          id: 'partner-requirements',
+          label: 'What do we need from a partner?',
+          sublabel: 'Like any buyer would ask',
           response: `
             <div class="space-y-3">
-              <p>Backend infrastructure:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Runtime:</strong> Node.js, Python</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">API:</strong> REST, GraphQL</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">DB:</strong> PostgreSQL, Redis</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Queue:</strong> BullMQ, SQS</div>
-              </div>
-              <p>Everything runs on <strong>AWS</strong> with CI/CD via GitHub Actions.</p>
+              <p>Same as any buyer — nothing more, nothing less:</p>
+              <ul class="space-y-2 list-none pl-0">
+                <li>📄 <strong>Price list or offer</strong> – wholesale prices, MOQ, EAN codes if available</li>
+                <li>📦 <strong>Delivery terms</strong> – warehouse location, lead time, minimum orders</li>
+                <li>💳 <strong>Payment terms</strong> – payment period, invoicing method</li>
+                <li>✅ <strong>Returns policy</strong> – process for defective goods or customer returns</li>
+              </ul>
+              <p>Product photos and descriptions we can sort ourselves. We mainly need to know the price and terms.</p>
             </div>`,
         },
         {
-          id: 'tech-infra',
-          label: 'Cloud & infrastructure',
-          sublabel: 'AWS, Vercel, monitoring',
+          id: 'business-models',
+          label: 'Cooperation models',
+          sublabel: 'Fulfillment, replenishment, flash sale…',
           response: `
             <div class="space-y-3">
-              <p>Our cloud architecture:</p>
+              <p>We understand all standard e-commerce models — we'll adapt to your needs:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>☁️ <strong>AWS</strong> – EC2, Lambda, RDS, S3, CloudFront</li>
-                <li>🚀 <strong>Vercel</strong> – frontend deployment, edge functions</li>
-                <li>📈 <strong>Monitoring</strong> – Datadog, Sentry, custom dashboards</li>
-                <li>🔒 <strong>Security</strong> – WAF, secrets management, audit logs</li>
+                <li>📦 <strong>Direct purchase</strong> – we buy from you, sell on our own account and risk</li>
+                <li>🚚 <strong>Consignment / dropshipping</strong> – you ship on our order</li>
+                <li>🏭 <strong>Fulfillment</strong> – your goods at our or FBA warehouse, we run the sales</li>
+                <li>🔄 <strong>Replenishment</strong> – regular purchasing based on sales and season</li>
+                <li>⚡ <strong>Flash sales</strong> – we buy surplus or seasonal stock for concentrated campaigns</li>
+                <li>📅 <strong>Seasonal campaigns</strong> – agreed volume for Black Friday, Christmas, season</li>
+                <li>🎁 <strong>Bundle deals</strong> – we buy complementary products and sell as a set</li>
+                <li>🔎 <strong>Longtail</strong> – large catalog, regular smaller orders, steady turnover</li>
               </ul>
             </div>`,
         },
         {
-          id: 'tech-approach',
-          label: 'How do we approach development?',
-          sublabel: 'Methodology, processes',
+          id: 'our-scope',
+          label: 'What\'s on our side?',
+          sublabel: 'Everything — that\'s our business',
           response: `
             <div class="space-y-3">
-              <p>Principles we follow:</p>
+              <p>Once we have the goods, everything else is our problem — not yours:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🔄 <strong>Iterative development</strong> – short cycles, fast deployment</li>
-                <li>🧪 <strong>Testing</strong> – unit, integration, e2e</li>
-                <li>📖 <strong>Documentation</strong> – API docs, runbooks, ADR</li>
-                <li>🤖 <strong>Automation</strong> – CI/CD, IaC, code quality gates</li>
+                <li>🗂️ <strong>Product pages</strong> – listing, photos, copy, localization into target language</li>
+                <li>💶 <strong>Pricing</strong> – setting and ongoing optimization based on market and competition</li>
+                <li>📣 <strong>Advertising</strong> – PPC campaigns on platforms where it makes sense</li>
+                <li>📞 <strong>Customer service</strong> – buyer communication, claims, returns handling</li>
+                <li>📊 <strong>Reporting</strong> – regular sales and performance overview if you want it</li>
               </ul>
-              <p>We don't do waterfall. We build, measure, iterate.</p>
+              <p>We don't manage your account. We have our own — and we take care of it ourselves.</p>
             </div>`,
         },
       ],
 
-      // ── Chat 3: ERP system integration ──
+      // ── Chat 3: System connectivity ──
       [
         {
-          id: 'erp-systems',
-          label: 'Which ERP systems do we integrate?',
-          sublabel: 'SAP, Pohoda, Money S3…',
+          id: 'how-it-works',
+          label: 'How does connectivity work?',
+          sublabel: 'Simple — we handle it for you',
           response: `
             <div class="space-y-3">
-              <p>We have experience integrating:</p>
+              <p>The whole process is straightforward — technical details are our problem:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🏢 <strong>SAP Business One</strong> – B2B and B2C scenarios</li>
-                <li>📗 <strong>Pohoda</strong> – Czech e-commerce projects</li>
-                <li>💼 <strong>Money S3 / S5</strong> – mid-size companies</li>
-                <li>🌐 <strong>Custom systems</strong> – custom API connections</li>
+                <li>1️⃣ <strong>We agree on the partnership</strong> – products, pricing, terms</li>
+                <li>2️⃣ <strong>You give us a contact</strong> for your IT person or system provider</li>
+                <li>3️⃣ <strong>We coordinate with them</strong> directly — connection, access, testing</li>
+                <li>4️⃣ <strong>You get the result</strong> – automatic sync, no manual work</li>
               </ul>
-              <p>The key is always <strong>bidirectional sync</strong> – orders, inventory, invoices.</p>
+              <p>You don't need to understand how it works under the hood. You just need it to work.</p>
             </div>`,
         },
         {
-          id: 'erp-middleware',
-          label: 'How does the middleware layer work?',
-          sublabel: 'BaseLinker, custom solutions',
+          id: 'what-we-need',
+          label: 'What do we need from you?',
+          sublabel: 'Minimum on your side',
           response: `
             <div class="space-y-3">
-              <p>Between the e-shop / marketplace and ERP sits our middleware:</p>
+              <p>On the IT side, we need very little from you:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🔗 <strong>BaseLinker</strong> – quick connection to 100+ platforms</li>
-                <li>⚙️ <strong>Custom middleware</strong> – for more complex business logic</li>
-                <li>🔄 <strong>Real-time sync</strong> – webhooks, polling, event-driven</li>
+                <li>📞 <strong>Your IT contact</strong> – internal IT or your system provider</li>
+                <li>🔑 <strong>System access</strong> – your IT person knows what that means</li>
+                <li>📋 <strong>Basic data info</strong> – what's in your system (prices, stock, products)</li>
               </ul>
-              <p>We choose based on complexity — simpler projects = BaseLinker, enterprise = custom.</p>
+              <p>The rest — how exactly we connect, testing, go-live — we sort out with your IT without your involvement.</p>
             </div>`,
         },
         {
-          id: 'erp-data',
-          label: 'Data flows & synchronization',
-          sublabel: 'Orders, inventory, prices',
+          id: 'what-syncs',
+          label: 'What syncs automatically?',
+          sublabel: 'Prices, stock, orders',
           response: `
             <div class="space-y-3">
-              <p>Typical data flows we handle:</p>
+              <p>Once connected, everything runs on its own:</p>
               <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Orders:</strong> MP → ERP</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Inventory:</strong> ERP → MP</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Prices:</strong> PIM → MP</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Invoices:</strong> ERP → email</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Prices:</strong> your system → marketplace</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Stock:</strong> near real-time availability</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Orders:</strong> marketplace → your system</div>
+                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Invoices:</strong> auto-sent to customer</div>
               </div>
-              <p>All with <strong>error handling</strong>, retry logic, and failure notifications.</p>
+              <p>When a price or availability changes on your end, the marketplace knows almost instantly.</p>
             </div>`,
         },
         {
-          id: 'erp-timeline',
-          label: 'How long does integration take?',
-          sublabel: 'Timeline, project phases',
+          id: 'integration-timeline',
+          label: 'How long does it take?',
+          sublabel: 'From agreement to go-live',
           response: `
             <div class="space-y-3">
-              <p>A typical integration project:</p>
+              <p>Depends on your system, but typically:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📋 <strong>Analysis</strong> (1–2 weeks) – process mapping, data audit</li>
-                <li>🛠️ <strong>Development</strong> (3–6 weeks) – connection, transformation, testing</li>
-                <li>🧪 <strong>UAT</strong> (1–2 weeks) – testing with real data</li>
-                <li>🚀 <strong>Go-live</strong> – deployment, monitoring, support</li>
+                <li>⚡ <strong>Price list in a spreadsheet or file</strong> – 1–2 weeks</li>
+                <li>📦 <strong>Standard accounting system</strong> (Pohoda, Money, custom ERP) – 2–4 weeks</li>
+                <li>🏢 <strong>More complex setup</strong> (SAP, multiple warehouses, custom) – 4–8 weeks</li>
               </ul>
-              <p>Total <strong>6–10 weeks</strong> depending on complexity. Simple connections even in 2 weeks.</p>
+              <p>Send us your IT contact and we'll give you a concrete estimate within 48 hours.</p>
             </div>`,
         },
       ],
@@ -829,14 +843,12 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Kdo jsme</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum non vel libero. Proin ac felis nec sapien ullamcorper dignissim.</p>
-            <p>Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Donec euismod, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <h4 class="text-white font-semibold text-base">Naše mise</h4>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.</p>
-            <p>Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula ut dictum pharetra, nisi nunc fringilla magna, in commodo elit erat nec turpis.</p>
-            <h4 class="text-white font-semibold text-base">Naše hodnoty</h4>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-            <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+            <p>Joined.cz s.r.o. je <strong>obchodní firma</strong> z IT a startupové komunity. Nakupujeme zboží, prodáváme ho na vlastních prodejních kanálech a marketplace platformách ve střední a západní Evropě — primárně v CZ, DE, AT, PL a NL.</p>
+            <p>Nejsme agentura ani zprostředkovatel. Operujeme vlastní účty, neseme vlastní riziko, děláme vlastní rozhodnutí. Za námi stojí roky reálné praxe v e-commerce: vlastní e-shopy, marketplace operace, systémová napojení.</p>
+            <h4 class="text-white font-semibold text-base">Co hledáme</h4>
+            <p>Hledáme dobré produkty a férové podmínky. Můžeme být jednoduše vaším odběratelem — fakturujete nám, my se staráme o zbytek. Nebo se dohodneme na komplexnějším modelu, pokud to dává smysl pro obě strany.</p>
+            <h4 class="text-white font-semibold text-base">Jak pracujeme</h4>
+            <p>Přímá komunikace. Rychlá rozhodnutí. Žádné sliby bez pokrytí.</p>
           </div>`,
       },
       contact: {
@@ -844,32 +856,29 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Spojte se s námi</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <p>Nejrychlejší cesta je e-mail nebo zpráva na LinkedIn. Na první kontakt odpovídáme obvykle do 24 hodin.</p>
             <div class="bg-white/5 rounded-lg p-4 space-y-2">
-              <p>📧 <strong class="text-white">hello@xyz.cz</strong></p>
-              <p>📞 <strong class="text-white">+420 xxx xxx xxx</strong></p>
+              <p>📧 <strong class="text-white">hello@joined.cz</strong></p>
+              <p>🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
               <p>📍 <strong class="text-white">Praha, Česká republika</strong></p>
             </div>
             <h4 class="text-white font-semibold text-base">Fakturační údaje</h4>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-            <p>Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula ut dictum pharetra, nisi nunc fringilla magna.</p>
-            <h4 class="text-white font-semibold text-base">Pracovní doba</h4>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor.</p>
+            <p>Joined.cz s.r.o. · IČO: (v procesu) · Praha, CZ · Plátce DPH</p>
+            <h4 class="text-white font-semibold text-base">Pracovní dostupnost</h4>
+            <p>Po–Pá, 9:00–18:00. Flexibilní pro mezinárodní partnery.</p>
           </div>`,
       },
       partners: {
         title: 'Partneři',
         body: `
           <div class="space-y-4">
-            <h4 class="text-white font-semibold text-base">Naši partneři</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum non vel libero.</p>
-            <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <h4 class="text-white font-semibold text-base">Strategická spolupráce</h4>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-            <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor.</p>
-            <h4 class="text-white font-semibold text-base">Jak se stát partnerem</h4>
-            <p>Ut ullamcorper, ligula ut dictum pharetra, nisi nunc fringilla magna, in commodo elit erat nec turpis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
-            <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+            <h4 class="text-white font-semibold text-base">Koho hledáme</h4>
+            <p>Hledáme <strong>dodavatele, výrobce a distributory</strong>, od kterých chceme nakupovat. Nepotřebujeme váš marketing ani vaši infrastrukturu — jen dobré produkty a férové nákupní podmínky.</p>
+            <p>Funguje to nejlépe, pokud máte standardizované produkty s EAN, rozumnou nákupní cenu a zájem o CZ, DE, AT, PL nebo NL trh.</p>
+            <h4 class="text-white font-semibold text-base">Jak to funguje</h4>
+            <p>Jeden meeting, dohodnuté podmínky, ceník nebo nabídkový list — a jedeme. Prodáváme na vlastních účtech, na vlastní zodpovědnost. Od prvního kontaktu po první objednávku typicky 2–4 týdny.</p>
+            <h4 class="text-white font-semibold text-base">Jak začít</h4>
+            <p>Napište na <strong>hello@joined.cz</strong> nebo LinkedIn. Domluvíme krátký úvodní call a zjistíme, jestli máme zájem o vaše produkty.</p>
           </div>`,
       },
       marketplaces: {
@@ -877,40 +886,36 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Kde prodáváme</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum.</p>
             <ul class="space-y-1 list-none pl-0">
-              <li>🇩🇪 Amazon.de, Kaufland.de, Otto.de</li>
-              <li>🇳🇱 Bol.com, Amazon.nl</li>
-              <li>🇵🇱 Allegro, Amazon.pl</li>
-              <li>🇫🇷 Amazon.fr, Cdiscount</li>
-              <li>🇨🇿 Alza Marketplace, Mall.cz</li>
+              <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka Košík</li>
+              <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
+              <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
+              <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
+              <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
+              <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (ve výhledu)</li>
             </ul>
-            <h4 class="text-white font-semibold text-base">Naše approach</h4>
-            <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit.</p>
-            <h4 class="text-white font-semibold text-base">Výsledky</h4>
-            <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor ut ullamcorper ligula.</p>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
+            <h4 class="text-white font-semibold text-base">Business modely</h4>
+            <p>Dropshipping, nákup-prodej, longtail strategie nebo revenue share. Vybereme model, který dává smysl pro konkrétní produkt a trh.</p>
+            <h4 class="text-white font-semibold text-base">Co řídíme sami</h4>
+            <p>Listing, content, pricing, reklama, zákaznický servis, logistika. Vše na vlastních účtech, vlastní zodpovědností — od nákupu po doručení zákazníkovi.</p>
           </div>`,
       },
       dev: {
-        title: 'Dev',
+        title: 'Systémy',
         body: `
           <div class="space-y-4">
-            <h4 class="text-white font-semibold text-base">Technologie & vývoj</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum.</p>
+            <h4 class="text-white font-semibold text-base">Systémy a nástroje</h4>
+            <p>Pracujeme s nástroji, které jsou standardem v e-commerce:</p>
             <div class="grid grid-cols-2 gap-2">
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Vue.js / Nuxt</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Node.js / Python</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">PostgreSQL</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">AWS / Vercel</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">BaseLinker</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Mergado</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Pohoda / SAP</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Amazon SP-API</div>
             </div>
-            <h4 class="text-white font-semibold text-base">Open source</h4>
-            <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-            <h4 class="text-white font-semibold text-base">API & integrace</h4>
-            <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor.</p>
-            <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
+            <h4 class="text-white font-semibold text-base">Vlastní vývoj</h4>
+            <p>Kde standardní nástroje nestačí, stavíme vlastní middleware — napojení na ERP, feed transformace, synchronizace skladů a objednávek.</p>
+            <h4 class="text-white font-semibold text-base">Integrace</h4>
+            <p>REST API, XML/CSV feedy, webhooky. Propojujeme cokoliv s čímkoliv, pokud to dává obchodní smysl.</p>
           </div>`,
       },
     },
@@ -920,14 +925,12 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Who we are</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum non vel libero. Proin ac felis nec sapien ullamcorper dignissim.</p>
-            <p>Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Donec euismod, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <h4 class="text-white font-semibold text-base">Our mission</h4>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.</p>
-            <p>Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula ut dictum pharetra, nisi nunc fringilla magna, in commodo elit erat nec turpis.</p>
-            <h4 class="text-white font-semibold text-base">Our values</h4>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-            <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+            <p>Joined.cz s.r.o. is a <strong>trading company</strong> from the IT and startup community. We buy products, sell them on our own sales channels and marketplace platforms across Central and Western Europe — primarily CZ, DE, AT, PL and NL.</p>
+            <p>We are not an agency or intermediary. We operate our own accounts, carry our own risk, make our own decisions. Behind us are years of hands-on e-commerce: running e-shops, marketplace operations, system integrations.</p>
+            <h4 class="text-white font-semibold text-base">What we look for</h4>
+            <p>Good products and fair terms. You can simply sell to us — invoice us, we handle everything else. Or we can agree on a more complex model if it makes sense for both sides.</p>
+            <h4 class="text-white font-semibold text-base">How we work</h4>
+            <p>Direct communication. Fast decisions. No promises without backing.</p>
           </div>`,
       },
       contact: {
@@ -935,32 +938,29 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Get in touch</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <p>The fastest route is email or a LinkedIn message. We typically respond to first contact within 24 hours.</p>
             <div class="bg-white/5 rounded-lg p-4 space-y-2">
-              <p>📧 <strong class="text-white">hello@xyz.cz</strong></p>
-              <p>📞 <strong class="text-white">+420 xxx xxx xxx</strong></p>
+              <p>📧 <strong class="text-white">hello@joined.cz</strong></p>
+              <p>🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
               <p>📍 <strong class="text-white">Prague, Czech Republic</strong></p>
             </div>
-            <h4 class="text-white font-semibold text-base">Billing details</h4>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-            <p>Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula ut dictum pharetra, nisi nunc fringilla magna.</p>
-            <h4 class="text-white font-semibold text-base">Business hours</h4>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor.</p>
+            <h4 class="text-white font-semibold text-base">Company details</h4>
+            <p>Joined.cz s.r.o. · ID: (in registration) · Prague, CZ · VAT registered</p>
+            <h4 class="text-white font-semibold text-base">Availability</h4>
+            <p>Mon–Fri, 9:00–18:00 CET. Flexible for international partners.</p>
           </div>`,
       },
       partners: {
         title: 'Partners',
         body: `
           <div class="space-y-4">
-            <h4 class="text-white font-semibold text-base">Our partners</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum non vel libero.</p>
-            <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <h4 class="text-white font-semibold text-base">Strategic cooperation</h4>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-            <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor.</p>
-            <h4 class="text-white font-semibold text-base">Become a partner</h4>
-            <p>Ut ullamcorper, ligula ut dictum pharetra, nisi nunc fringilla magna, in commodo elit erat nec turpis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
-            <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+            <h4 class="text-white font-semibold text-base">Who we're looking for</h4>
+            <p>We're looking for <strong>suppliers, manufacturers and distributors</strong> we can buy from. We don't need your marketing or infrastructure — just good products and fair purchase terms.</p>
+            <p>It works best if you have standardized products with EAN codes, a reasonable wholesale price, and interest in the CZ, DE, AT, PL or NL market.</p>
+            <h4 class="text-white font-semibold text-base">How it works</h4>
+            <p>One meeting, agreed terms, a price list or offer sheet — and we're off. We sell on our own accounts, on our own responsibility. From first contact to first order typically 2–4 weeks.</p>
+            <h4 class="text-white font-semibold text-base">How to start</h4>
+            <p>Write to <strong>hello@joined.cz</strong> or LinkedIn. We'll set up a short intro call and see whether we're interested in your products.</p>
           </div>`,
       },
       marketplaces: {
@@ -968,40 +968,36 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Where we sell</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum.</p>
             <ul class="space-y-1 list-none pl-0">
-              <li>🇩🇪 Amazon.de, Kaufland.de, Otto.de</li>
-              <li>🇳🇱 Bol.com, Amazon.nl</li>
-              <li>🇵🇱 Allegro, Amazon.pl</li>
-              <li>🇫🇷 Amazon.fr, Cdiscount</li>
-              <li>🇨🇿 Alza Marketplace, Mall.cz</li>
+              <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka Košík</li>
+              <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
+              <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
+              <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
+              <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
+              <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (upcoming)</li>
             </ul>
-            <h4 class="text-white font-semibold text-base">Our approach</h4>
-            <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit.</p>
-            <h4 class="text-white font-semibold text-base">Results</h4>
-            <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor ut ullamcorper ligula.</p>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
+            <h4 class="text-white font-semibold text-base">Business models</h4>
+            <p>Dropshipping, buy-sell, longtail strategy or revenue share. We pick the model that makes sense for the specific product and market.</p>
+            <h4 class="text-white font-semibold text-base">What we run ourselves</h4>
+            <p>Listing, content, pricing, advertising, customer service, logistics. All on our own accounts, our own responsibility — from purchase to delivery.</p>
           </div>`,
       },
       dev: {
-        title: 'Dev',
+        title: 'Systems',
         body: `
           <div class="space-y-4">
-            <h4 class="text-white font-semibold text-base">Technology & development</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nisi at arcu fringilla, vel consequat magna tincidunt. Sed vitae tortor ac risus dictum fermentum.</p>
+            <h4 class="text-white font-semibold text-base">Systems and tools</h4>
+            <p>We work with the standard tools of e-commerce:</p>
             <div class="grid grid-cols-2 gap-2">
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Vue.js / Nuxt</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Node.js / Python</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">PostgreSQL</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">AWS / Vercel</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">BaseLinker</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Mergado</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Pohoda / SAP</div>
+              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Amazon SP-API</div>
             </div>
-            <h4 class="text-white font-semibold text-base">Open source</h4>
-            <p>Proin ac felis nec sapien ullamcorper dignissim. Nullam auctor, nisi eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.</p>
-            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-            <h4 class="text-white font-semibold text-base">API & integrations</h4>
-            <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor.</p>
-            <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
+            <h4 class="text-white font-semibold text-base">Custom development</h4>
+            <p>Where standard tools fall short, we build our own middleware — ERP connections, feed transformations, inventory and order synchronization.</p>
+            <h4 class="text-white font-semibold text-base">Integrations</h4>
+            <p>REST API, XML/CSV feeds, webhooks. We connect anything to anything, as long as it makes business sense.</p>
           </div>`,
       },
     },
@@ -1108,6 +1104,9 @@ watch(lang, () => {
 function onKeydown(e: KeyboardEvent) {
   if (e.key === 'Escape') closePopup()
 }
+
+/* ---- Cookie banner ---- */
+const cookieVisible = ref(true)
 
 onMounted(() => {
   initializeChats()
@@ -1249,7 +1248,7 @@ onUnmounted(() => {
     <div
       :class="[
         'flex-1 flex flex-col min-w-0 transition-[margin] duration-300',
-        sidebarOpen ? 'md:ml-64' : '',
+        sidebarOpen ? 'md:ml-64 md:mr-64' : '',
       ]"
     >
       <!-- Bridge Status Bar -->
@@ -1432,6 +1431,50 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
+
+    <!-- ==================== COOKIE BANNER ==================== -->
+    <Transition name="fade">
+      <div
+        v-if="cookieVisible"
+        class="fixed bottom-5 right-5 z-[70] w-72 bg-[#0a0f1e] cookie-panel animate-fade-in"
+      >
+        <!-- Corner brackets -->
+        <span class="absolute top-0 left-0 w-3 h-3 border-t border-l border-cyan-400/50 pointer-events-none"></span>
+        <span class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-cyan-400/50 pointer-events-none"></span>
+
+        <!-- Header -->
+        <div class="flex items-center justify-between px-4 pt-3 pb-2">
+          <div class="flex items-center gap-2">
+            <span class="w-1 h-1 rounded-full bg-cyan-400 hud-pulse"></span>
+            <span class="text-[9px] font-mono text-cyan-400/50 uppercase tracking-[0.2em]">SYSTEM // COOKIES</span>
+          </div>
+          <button class="text-cyan-400/30 hover:text-cyan-400/70 transition-colors text-xs leading-none" @click="cookieVisible = false">✕</button>
+        </div>
+
+        <!-- Body -->
+        <div class="px-4 pb-3">
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Tento web používá cookies pro zajištění správné funkce a analýzu návštěvnosti.
+          </p>
+        </div>
+
+        <!-- Actions -->
+        <div class="px-4 pb-4 flex items-center gap-2">
+          <button
+            class="flex-1 py-2 text-[10px] font-mono uppercase tracking-wider text-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20 transition-colors rounded-sm hud-btn-accept"
+            @click="cookieVisible = false"
+          >
+            Přijmout
+          </button>
+          <button
+            class="flex-1 py-2 text-[10px] font-mono uppercase tracking-wider text-gray-500 hover:text-gray-300 bg-white/5 hover:bg-white/8 transition-colors rounded-sm"
+            @click="cookieVisible = false"
+          >
+            Odmítnout
+          </button>
+        </div>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -1570,6 +1613,21 @@ header {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* ── Cookie banner panel ── */
+.cookie-panel {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(0, 210, 255, 0.08),
+    -40px -40px 160px rgba(0, 210, 255, 0.18),
+    -15px -15px 70px rgba(0, 210, 255, 0.28);
+}
+.hud-btn-accept {
+  box-shadow: 0 0 0 1px rgba(0, 210, 255, 0.2);
+}
+.hud-btn-accept:hover {
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.25), 0 0 0 1px rgba(0, 210, 255, 0.35);
 }
 
 /* ── Scrollbars ── */
