@@ -22,11 +22,11 @@ type Lang = 'cs' | 'en'
 
 /* ---- SEO ---- */
 useSeoMeta({
-  title: 'Joined.cz s.r.o. | E-commerce & Technology',
-  ogTitle: 'Joined.cz s.r.o.',
+  title: 'Joined.cz | E-commerce & Technology',
+  ogTitle: 'Joined.cz',
   description:
-    'Technologická firma zaměřená na e-commerce, marketplace operations a systémové integrace.',
-  ogDescription: 'E-commerce · Technologie · Marketplace Operations',
+    'Joined.cz je obchodní firma z IT prostředí. Nakupujeme zboží a prodáváme ho na vlastních marketplace kanálech ve střední a západní Evropě — Allegro, Kaufland, cDiscount, ManoMano a další. Hledáme dodavatele a výrobce s dobrými produkty.',
+  ogDescription: 'E-commerce operations · Technical business sale partner · CZ / DE / PL / FR / IT',
 })
 
 /* ---- Language ---- */
@@ -118,7 +118,7 @@ function submitForm() {
   if (!formEmail.value || !formMessage.value) return
   const subject = encodeURIComponent('Zpráva z webu / Website message')
   const body = encodeURIComponent(`From: ${formEmail.value}\n\n${formMessage.value}`)
-  window.location.href = `mailto:hello@joined.cz?subject=${subject}&body=${body}`
+  window.location.href = `mailto:obchod@joined.cz?subject=${subject}&body=${body}`
   formEmail.value = ''
   formMessage.value = ''
   formOpen.value = false
@@ -132,21 +132,22 @@ function getInitialMessage(chatIndex: number): Message {
       // ── Chat 0: Kdo jsme ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">Joined.cz s.r.o.</h2>
-          <p class="text-cyan-400 text-sm font-medium">E-commerce · Obchodní partner · CZ / DE / AT / PL / NL</p>
+          <h2 class="text-2xl font-bold text-white mb-2">Joined.cz</h2>
+          <p class="text-cyan-400 text-sm font-medium">E-commerce operations · Technical business sale partner · CZ / DE / PL / FR / IT</p>
         </div>
         <p>Jsme <strong>obchodní firma</strong> z IT a startupové komunity — nakupujeme, prodáváme a provozujeme vlastní prodejní kanály na marketplace platformách ve střední a západní Evropě.</p>
         <p>Za námi stojí roky reálné praxe v e-commerce — vlastní e-shopy, online marketing, systémová napojení, marketplace operace. Pracujeme s produkty z různých kategorií: elektronika, sport, domácnost, automotive, hobby, zahrada i průmyslové zboží. Víme, kde je poptávka a kde se dá vydělat.</p>
         <p>Hledáme dobré produkty a dobré podmínky — ať už chcete jednoduše prodávat nám, nebo stavět společný obchod. Dohodnem se rychle. 👇</p>
+        <p class="text-gray-600 text-xs italic mt-2">Tento web byl vygenerován za pomoci AI (Claude Sonnet 4.6) a slouží jako business vizitka.</p>
       </div>`,
 
       // ── Chat 1: Marketplace prodej ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Marketplace prodej v Evropě</h2>
-          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · Bol.com · Alza · Mall</p>
+          <p class="text-cyan-400 text-sm font-medium">Allegro · Kaufland · cDiscount · ManoMano · Leroy Merlin · Castorama</p>
         </div>
-        <p>Prodáváme na hlavních evropských marketplace platformách — primárně v <strong>CZ, DE, AT, PL a NL</strong>.</p>
+        <p>Prodáváme na hlavních evropských marketplace platformách — primárně v <strong>CZ, DE, PL, FR, IT</strong>.</p>
         <p>Každý vstup předchází důkladný průzkum: víme, jaké jsou ceny konkurence, kde je poptávka a kde je prostor. Ceny a stavy skladu jsme schopni aktualizovat skoro v reálném čase — nezaspíme výprodej ani výkyv trhu.</p>
         <p>Zeptejte se na konkrétní platformy, trhy nebo kategorie. 👇</p>
       </div>`,
@@ -157,8 +158,8 @@ function getInitialMessage(chatIndex: number): Message {
           <h2 class="text-2xl font-bold text-white mb-2">Jak spolupracujeme</h2>
           <p class="text-cyan-400 text-sm font-medium">Jeden meeting · Rychlý start · Bez zbytečné byrokracie</p>
         </div>
-        <p>Vše dohodnem na <strong>jednom meetingu</strong>. Řeknete nám, co máte, za kolik a za jakých podmínek — my řekneme, jestli to dává smysl a jak chceme spolupracovat. Žádné složité onboardingy.</p>
-        <p>Můžeme být jednoduše vaším odběratelem, nebo můžeme stavět komplexnější model — nákup-prodej, fulfillment, replenishment, flash sale, sezónní kampaně. Rozhodnutí je vždy na obou stranách. 👇</p>
+        <p>Vše dohodneme po emailu, nebo na <strong>jednom meetingu</strong>. Řeknete nám, co máte, za kolik a za jakých podmínek — my řekneme, jestli to dává smysl a jak chceme spolupracovat. Žádné složité onboardingy.</p>
+        <p>Můžeme být jednoduše vaším odběratelem, nebo můžeme stavět komplexnější model — fulfillment, replenishment, flash sale, sezónní kampaně. Rozhodnutí je vždy na obou stranách. 👇</p>
       </div>`,
 
       // ── Chat 3: Systémové napojení ──
@@ -168,7 +169,7 @@ function getInitialMessage(chatIndex: number): Message {
           <p class="text-cyan-400 text-sm font-medium">Napojíme cokoliv · Vy se nemusíte starat · Vyřešíme s vaším IT</p>
         </div>
         <p>Systémové napojení řešíme za vás — <strong>stačí nám kontakt na vašeho ajťáka nebo IT dodavatele</strong> a my s ním domluvíme vše technické přímo, bez vašeho zapojení.</p>
-        <p>Výsledek: vaše ceny, skladové zásoby a objednávky se synchronizují automaticky mezi vaším systémem a marketplace platformami. Bez ruční práce, bez chyb, bez zpoždění. 👇</p>
+        <p>Výsledek: vaše a naše ceny, skladové zásoby a objednávky se synchronizují automaticky mezi vaším systémem a marketplace platformami. Bez ruční práce, bez chyb, bez zpoždění. 👇</p>
       </div>`,
     ],
 
@@ -176,21 +177,22 @@ function getInitialMessage(chatIndex: number): Message {
       // ── Chat 0: Who we are ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
-          <h2 class="text-2xl font-bold text-white mb-2">Joined.cz s.r.o.</h2>
-          <p class="text-cyan-400 text-sm font-medium">E-commerce · Business partner · CZ / DE / AT / PL / NL</p>
+          <h2 class="text-2xl font-bold text-white mb-2">Joined.cz</h2>
+          <p class="text-cyan-400 text-sm font-medium">E-commerce operations · Technical business sale partner · CZ / DE / PL / FR / IT</p>
         </div>
         <p>We are a <strong>trading company</strong> from the IT and startup community — we buy, we sell, and we operate our own sales channels on marketplace platforms across Central and Western Europe.</p>
         <p>Behind us are years of real-world e-commerce experience — running e-shops, online marketing, system integrations, marketplace operations. We work across product categories: electronics, sports, home, automotive, hobby, garden and industrial goods. We know where the demand is and where margins hold.</p>
         <p>We're looking for good products and good terms — whether you want to simply sell to us, or build something together. We move fast. 👇</p>
+        <p class="text-gray-600 text-xs italic mt-2">This website was generated with the help of AI (Claude Sonnet 4.6) and serves as a business card.</p>
       </div>`,
 
       // ── Chat 1: Marketplace sales ──
       `<div class="space-y-4">
         <div class="bg-cyan-500/5 border border-cyan-400/20 rounded-sm p-5">
           <h2 class="text-2xl font-bold text-white mb-2">Marketplace Sales in Europe</h2>
-          <p class="text-cyan-400 text-sm font-medium">Amazon · Kaufland · Allegro · Bol.com · Alza · Mall</p>
+          <p class="text-cyan-400 text-sm font-medium">Allegro · Kaufland · cDiscount · ManoMano · Leroy Merlin · Castorama</p>
         </div>
-        <p>We sell on major European marketplace platforms — primarily in <strong>CZ, DE, AT, PL and NL</strong>.</p>
+        <p>We sell on major European marketplace platforms — primarily in <strong>CZ, DE, PL, FR, IT</strong>.</p>
         <p>Every market entry is preceded by thorough research: we know competitor prices, where demand is and where there's room. We can update prices and inventory near real-time — we don't miss a flash sale or a market shift.</p>
         <p>Ask about specific platforms, markets or categories. 👇</p>
       </div>`,
@@ -201,8 +203,8 @@ function getInitialMessage(chatIndex: number): Message {
           <h2 class="text-2xl font-bold text-white mb-2">How we partner</h2>
           <p class="text-cyan-400 text-sm font-medium">One meeting · Fast start · No unnecessary bureaucracy</p>
         </div>
-        <p>Everything gets agreed in <strong>one meeting</strong>. Tell us what you have, at what price, and under what terms — we'll say whether it makes sense and how we want to work together. No complex onboarding.</p>
-        <p>We can be your straightforward buyer, or we can build something more structured — buy-sell, fulfillment, replenishment, flash sales, seasonal campaigns. The decision is always on both sides. 👇</p>
+        <p>Everything gets agreed over email, or in <strong>one meeting</strong>. Tell us what you have, at what price, and under what terms — we'll say whether it makes sense and how we want to work together. No complex onboarding.</p>
+        <p>We can be your straightforward buyer, or we can build something more structured — fulfillment, replenishment, flash sales, seasonal campaigns. The decision is always on both sides. 👇</p>
       </div>`,
 
       // ── Chat 3: System connectivity ──
@@ -212,7 +214,7 @@ function getInitialMessage(chatIndex: number): Message {
           <p class="text-cyan-400 text-sm font-medium">We connect anything · You don't need to worry · We'll sort it with your IT</p>
         </div>
         <p>We handle the technical side for you — <strong>just give us your IT contact or system provider</strong> and we'll coordinate everything directly with them, without pulling you in.</p>
-        <p>The result: your prices, stock levels and orders sync automatically between your system and the marketplace platforms. No manual work, no errors, no delays. 👇</p>
+        <p>The result: your and our prices, stock levels and orders sync automatically between your system and the marketplace platforms. No manual work, no errors, no delays. 👇</p>
       </div>`,
     ],
   }
@@ -234,12 +236,12 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Naším hlavním businessem je <strong>technický sales</strong> — prodej produktů partnerů na evropských marketplace platformách a e-shopech:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🛒 <strong>Marketplace sales</strong> – Amazon, Kaufland, Allegro, Bol.com, Alza a další v EU</li>
+                <li>🛒 <strong>Marketplace sales</strong> – Amazon, cDiscount, Leroy Merlin, Allegro, ManoMano, Castorama</li>
                 <li>🏪 <strong>E-shop operace</strong> – provoz vlastních obchodních kanálů</li>
                 <li>🔗 <strong>Systémové napojení</strong> – ERP integrace, feed management, middleware</li>
-                <li>🌍 <strong>Aktivní trhy</strong> – CZ, DE, AT, PL, NL</li>
+                <li>🌍 <strong>Aktivní trhy</strong> – CZ, DE, PL, FR, IT</li>
               </ul>
-              <p>Pracujeme s různými business modely — <strong>dropshipping, nákup-prodej, longtail</strong>. Zvolíme to, co dává smysl pro konkrétní produkt a trh.</p>
+              <p>Pracujeme s různými business modely — <strong>dropshipping, fulfillment, replenishment, longtailing</strong>. Zvolíme to, co dává smysl pro konkrétní produkt a trh.</p>
             </div>`,
         },
         {
@@ -250,7 +252,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Za námi stojí roky praxe napříč celým e-commerce stackem:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📦 <strong>Marketplace operace</strong> – Amazon, Kaufland, Allegro, bol.com a další</li>
+                <li>📦 <strong>Marketplace operace</strong> – vertikální i horizontální marketplaces, flash sales a private marketplaces</li>
                 <li>🏗️ <strong>E-shopy</strong> – od spuštění po škálování, různé platformy a trhy</li>
                 <li>📣 <strong>Online marketing</strong> – PPC, SEO, srovnávače, feed optimalizace</li>
                 <li>⚙️ <strong>Systémové integrace</strong> – ERP (Pohoda, SAP, Money S3), BaseLinker, Mergado</li>
@@ -271,7 +273,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
                 <li>🔄 <strong>Sdílený model</strong> – dohodnuté podmínky, vy dodáváte, my prodáváme a dělíme se o výsledek</li>
                 <li>🚀 <strong>Rychlý start</strong> – od meetingu po první objednávku typicky 2–4 týdny</li>
               </ul>
-              <p>Nespravujeme vaše účty ani vaše produktové stránky. Kupujeme od vás a prodáváme sami — na naší zodpovědnosti.</p>
+              <p>Vy znáte produkt, my známe terén.</p>
             </div>`,
         },
         {
@@ -282,13 +284,12 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Aktuálně aktivní nebo ve výhledu:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka</li>
-                <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
-                <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
-                <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
-                <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
-                <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (ve výhledu)</li>
+                <li>🇨🇿 <strong>CZ</strong> – Allegro, Alza</li>
+                <li>🇩🇪 <strong>DE</strong> – Kaufland, Amazon.de</li>
+                <li>🇵🇱 <strong>PL</strong> – Castorama, Leroy Merlin, Allegro, eMag</li>
+                <li>🇫🇷 <strong>FR</strong> – cDiscount, ManoMano, Leroy Merlin, Castorama</li>
               </ul>
+              <p>Pro vaše produkty vždy hledáme trh, kde je největší poptávka, IT nám nestojí v cestě, je to náš nástroj.</p>
             </div>`,
         },
         {
@@ -299,10 +300,8 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Nejrychlejší cesta k nám:</p>
               <div class="bg-white/4 rounded-sm p-4 space-y-2 not-prose">
-                <p class="text-gray-300">📧 <strong class="text-white">hello@joined.cz</strong></p>
-                <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
+                <p class="text-gray-300">📧 <strong class="text-white">obchod@joined.cz</strong></p>
                 <p class="text-gray-300">📍 Praha, Česká republika</p>
-                <p class="text-gray-300">🏢 Joined.cz s.r.o.</p>
               </div>
             </div>`,
         },
@@ -313,16 +312,15 @@ function getChipsForChat(chatIndex: number): Chip[] {
         {
           id: 'mp-platforms',
           label: 'Na jakých platformách prodáváme?',
-          sublabel: 'Amazon, Kaufland, Allegro…',
+          sublabel: 'Allegro, Kaufland, cDiscount…',
           response: `
             <div class="space-y-3">
               <p>Aktuálně aktivní nebo rozbíhané:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🇨🇿 <strong>Alza Marketplace</strong>, Mall.cz, Heureka Košík</li>
-                <li>🇩🇪 <strong>Amazon.de</strong>, Kaufland.de, Otto.de</li>
-                <li>🇦🇹 <strong>Amazon.at</strong>, Kaufland.at</li>
-                <li>🇵🇱 <strong>Allegro</strong>, Amazon.pl</li>
-                <li>🇳🇱 <strong>Bol.com</strong>, Amazon.nl</li>
+                <li>🇨🇿 <strong>CZ</strong> – Allegro, Alza</li>
+                <li>🇩🇪 <strong>DE</strong> – Kaufland, Amazon.de</li>
+                <li>🇵🇱 <strong>PL</strong> – Castorama, Leroy Merlin, Allegro, eMag</li>
+                <li>🇫🇷 <strong>FR</strong> – cDiscount, ManoMano, Leroy Merlin, Castorama</li>
               </ul>
               <p>Každá platforma má jiná pravidla a přístup k zákazníkovi. Víme, jak na každé z nich provozovat ziskový provoz.</p>
             </div>`,
@@ -370,7 +368,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
               <ul class="space-y-2 list-none pl-0">
                 <li>1️⃣ <strong>Meeting</strong> – produkty, ceny, business model, podmínky</li>
                 <li>2️⃣ <strong>Feed / ceník</strong> – vy pošlete data, my napojíme do systémů</li>
-                <li>3️⃣ <strong>Listing</strong> – tvorba a optimalizace produktových stránek</li>
+                <li>3️⃣ <strong>Listing</strong> – Listing na marketplaces není vždy jednoduchý, proto se o něj staráme my</li>
                 <li>4️⃣ <strong>Launch</strong> – spuštění na platformě, první objednávky</li>
                 <li>5️⃣ <strong>Reporting</strong> – pravidelný přehled prodejů, marží, výkonu</li>
               </ul>
@@ -391,11 +389,11 @@ function getChipsForChat(chatIndex: number): Chip[] {
               <ul class="space-y-2 list-none pl-0">
                 <li>📋 <strong>Váš katalog</strong> – jaké produkty, kategorie, ceny</li>
                 <li>🌍 <strong>Cílové trhy</strong> – kde chcete nebo kde vidíme příležitost</li>
-                <li>📦 <strong>Business model</strong> – dropshipping / nákup-prodej / longtail</li>
+                <li>📦 <strong>Business model</strong> – dropshipping / fulfillment / replenishment / longtailing</li>
                 <li>💰 <strong>Cenové podmínky</strong> – výkupní ceny, marže, revenue share</li>
                 <li>🔗 <strong>Logistika</strong> – expedice z vaší strany nebo z naší / FBA</li>
               </ul>
-              <p>Výstup meetingu: jasná dohoda nebo konkrétní next steps. Bez zbytečného táhnutí.</p>
+              <p>Výstup: jasná dohoda nebo konkrétní next steps. Bez zbytečného táhnutí.</p>
             </div>`,
         },
         {
@@ -486,22 +484,6 @@ function getChipsForChat(chatIndex: number): Chip[] {
             </div>`,
         },
         {
-          id: 'what-syncs',
-          label: 'Co se synchronizuje automaticky?',
-          sublabel: 'Ceny, sklad, objednávky',
-          response: `
-            <div class="space-y-3">
-              <p>Po napojení běží vše samo:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Ceny:</strong> váš systém → marketplace</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Sklad:</strong> aktuální stav skoro v reálném čase</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Objednávky:</strong> marketplace → váš systém</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Faktury:</strong> automaticky zákazníkovi</div>
-              </div>
-              <p>Když se změní cena nebo dostupnost u vás, marketplace to ví skoro okamžitě.</p>
-            </div>`,
-        },
-        {
           id: 'integration-timeline',
           label: 'Jak dlouho napojení trvá?',
           sublabel: 'Od dohody po spuštění',
@@ -509,6 +491,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Záleží na vašem systému, ale zpravidla:</p>
               <ul class="space-y-2 list-none pl-0">
+                <li>📄 <strong>Objednávky přes CSV/XLSX</strong> – 1–2 týdny</li>
                 <li>⚡ <strong>Ceník v tabulce nebo souboru</strong> – 1–2 týdny</li>
                 <li>📦 <strong>Standardní účetní systém</strong> (Pohoda, Money, vlastní ERP) – 2–4 týdny</li>
                 <li>🏢 <strong>Komplexnější systém</strong> (SAP, více skladů, custom) – 4–8 týdnů</li>
@@ -530,12 +513,12 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Our core business is <strong>technical sales</strong> — selling partner products on European marketplace platforms and e-shops:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🛒 <strong>Marketplace sales</strong> – Amazon, Kaufland, Allegro, Bol.com, Alza and more across EU</li>
+                <li>🛒 <strong>Marketplace sales</strong> – Amazon, cDiscount, Leroy Merlin, Allegro, ManoMano, Castorama</li>
                 <li>🏪 <strong>E-shop operations</strong> – running our own sales channels</li>
                 <li>🔗 <strong>System connectivity</strong> – ERP integrations, feed management, middleware</li>
-                <li>🌍 <strong>Active markets</strong> – CZ, DE, AT, PL, NL</li>
+                <li>🌍 <strong>Active markets</strong> – CZ, DE, PL, FR, IT</li>
               </ul>
-              <p>We work with various business models — <strong>dropshipping, buy-sell, longtail</strong>. We pick what makes sense for the specific product and market.</p>
+              <p>We work with various business models — <strong>dropshipping, fulfillment, replenishment, longtailing</strong>. We pick what makes sense for the specific product and market.</p>
             </div>`,
         },
         {
@@ -546,7 +529,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Behind us are years of hands-on experience across the full e-commerce stack:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>📦 <strong>Marketplace operations</strong> – Amazon, Kaufland, Allegro, bol.com and others</li>
+                <li>📦 <strong>Marketplace operations</strong> – vertical &amp; horizontal marketplaces, flash sales and private marketplaces</li>
                 <li>🏗️ <strong>E-shops</strong> – from launch to scaling, across platforms and markets</li>
                 <li>📣 <strong>Online marketing</strong> – PPC, SEO, price comparison sites, feed optimization</li>
                 <li>⚙️ <strong>System integrations</strong> – ERP (Pohoda, SAP, Money S3), BaseLinker, Mergado</li>
@@ -567,7 +550,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
                 <li>🔄 <strong>Shared model</strong> – agreed terms, you supply, we sell and share the result</li>
                 <li>🚀 <strong>Fast start</strong> – from meeting to first order typically 2–4 weeks</li>
               </ul>
-              <p>We don't manage your accounts or your product pages. We buy from you and sell ourselves — on our responsibility.</p>
+              <p>You know the product, we know the terrain.</p>
             </div>`,
         },
         {
@@ -578,13 +561,12 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Currently active or in pipeline:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka</li>
-                <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
-                <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
-                <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
-                <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
-                <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (upcoming)</li>
+                <li>🇨🇿 <strong>CZ</strong> – Allegro, Alza</li>
+                <li>🇩🇪 <strong>DE</strong> – Kaufland, Amazon.de</li>
+                <li>🇵🇱 <strong>PL</strong> – Castorama, Leroy Merlin, Allegro, eMag</li>
+                <li>🇫🇷 <strong>FR</strong> – cDiscount, ManoMano, Leroy Merlin, Castorama</li>
               </ul>
+              <p>We always find the market where demand is highest for your products — IT is our tool, not our obstacle.</p>
             </div>`,
         },
         {
@@ -595,10 +577,8 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>The fastest way to reach us:</p>
               <div class="bg-white/4 rounded-sm p-4 space-y-2 not-prose">
-                <p class="text-gray-300">📧 <strong class="text-white">hello@joined.cz</strong></p>
-                <p class="text-gray-300">🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
+                <p class="text-gray-300">📧 <strong class="text-white">obchod@joined.cz</strong></p>
                 <p class="text-gray-300">📍 Prague, Czech Republic</p>
-                <p class="text-gray-300">🏢 Joined.cz s.r.o.</p>
               </div>
             </div>`,
         },
@@ -609,16 +589,15 @@ function getChipsForChat(chatIndex: number): Chip[] {
         {
           id: 'mp-platforms',
           label: 'Which platforms do we sell on?',
-          sublabel: 'Amazon, Kaufland, Allegro…',
+          sublabel: 'Allegro, Kaufland, cDiscount…',
           response: `
             <div class="space-y-3">
               <p>Currently active or ramping up:</p>
               <ul class="space-y-2 list-none pl-0">
-                <li>🇨🇿 <strong>Alza Marketplace</strong>, Mall.cz, Heureka Košík</li>
-                <li>🇩🇪 <strong>Amazon.de</strong>, Kaufland.de, Otto.de</li>
-                <li>🇦🇹 <strong>Amazon.at</strong>, Kaufland.at</li>
-                <li>🇵🇱 <strong>Allegro</strong>, Amazon.pl</li>
-                <li>🇳🇱 <strong>Bol.com</strong>, Amazon.nl</li>
+                <li>🇨🇿 <strong>CZ</strong> – Allegro, Alza</li>
+                <li>🇩🇪 <strong>DE</strong> – Kaufland, Amazon.de</li>
+                <li>🇵🇱 <strong>PL</strong> – Castorama, Leroy Merlin, Allegro, eMag</li>
+                <li>🇫🇷 <strong>FR</strong> – cDiscount, ManoMano, Leroy Merlin, Castorama</li>
               </ul>
               <p>Each platform has different rules and customer service standards. We know how to run profitable operations on all of them.</p>
             </div>`,
@@ -666,7 +645,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
               <ul class="space-y-2 list-none pl-0">
                 <li>1️⃣ <strong>Meeting</strong> – products, pricing, business model, terms</li>
                 <li>2️⃣ <strong>Feed / price list</strong> – you send the data, we connect it to our systems</li>
-                <li>3️⃣ <strong>Listing</strong> – creation and optimization of product pages</li>
+                <li>3️⃣ <strong>Listing</strong> – Marketplace listing isn't always straightforward, so we handle it ourselves</li>
                 <li>4️⃣ <strong>Launch</strong> – going live on the platform, first orders</li>
                 <li>5️⃣ <strong>Reporting</strong> – regular overview of sales, margins, performance</li>
               </ul>
@@ -687,11 +666,11 @@ function getChipsForChat(chatIndex: number): Chip[] {
               <ul class="space-y-2 list-none pl-0">
                 <li>📋 <strong>Your catalog</strong> – what products, categories, prices</li>
                 <li>🌍 <strong>Target markets</strong> – where you want to be or where we see opportunity</li>
-                <li>📦 <strong>Business model</strong> – dropshipping / buy-sell / longtail</li>
+                <li>📦 <strong>Business model</strong> – dropshipping / fulfillment / replenishment / longtailing</li>
                 <li>💰 <strong>Pricing terms</strong> – wholesale prices, margin, revenue share</li>
                 <li>🔗 <strong>Logistics</strong> – fulfillment from your side or ours / FBA</li>
               </ul>
-              <p>Meeting outcome: a clear agreement or concrete next steps. No unnecessary dragging.</p>
+              <p>Outcome: a clear agreement or concrete next steps. No unnecessary dragging.</p>
             </div>`,
         },
         {
@@ -782,22 +761,6 @@ function getChipsForChat(chatIndex: number): Chip[] {
             </div>`,
         },
         {
-          id: 'what-syncs',
-          label: 'What syncs automatically?',
-          sublabel: 'Prices, stock, orders',
-          response: `
-            <div class="space-y-3">
-              <p>Once connected, everything runs on its own:</p>
-              <div class="grid grid-cols-2 gap-2 my-3 not-prose">
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Prices:</strong> your system → marketplace</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Stock:</strong> near real-time availability</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Orders:</strong> marketplace → your system</div>
-                <div class="bg-white/4 rounded-sm px-3 py-2 text-sm text-gray-300"><strong class="text-white">Invoices:</strong> auto-sent to customer</div>
-              </div>
-              <p>When a price or availability changes on your end, the marketplace knows almost instantly.</p>
-            </div>`,
-        },
-        {
           id: 'integration-timeline',
           label: 'How long does it take?',
           sublabel: 'From agreement to go-live',
@@ -805,6 +768,7 @@ function getChipsForChat(chatIndex: number): Chip[] {
             <div class="space-y-3">
               <p>Depends on your system, but typically:</p>
               <ul class="space-y-2 list-none pl-0">
+                <li>📄 <strong>Orders via CSV/XLSX</strong> – 1–2 weeks</li>
                 <li>⚡ <strong>Price list in a spreadsheet or file</strong> – 1–2 weeks</li>
                 <li>📦 <strong>Standard accounting system</strong> (Pohoda, Money, custom ERP) – 2–4 weeks</li>
                 <li>🏢 <strong>More complex setup</strong> (SAP, multiple warehouses, custom) – 4–8 weeks</li>
@@ -843,12 +807,12 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Kdo jsme</h4>
-            <p>Joined.cz s.r.o. je <strong>obchodní firma</strong> z IT a startupové komunity. Nakupujeme zboží, prodáváme ho na vlastních prodejních kanálech a marketplace platformách ve střední a západní Evropě — primárně v CZ, DE, AT, PL a NL.</p>
-            <p>Nejsme agentura ani zprostředkovatel. Operujeme vlastní účty, neseme vlastní riziko, děláme vlastní rozhodnutí. Za námi stojí roky reálné praxe v e-commerce: vlastní e-shopy, marketplace operace, systémová napojení.</p>
+            <p>Jsme technicky <strong>obchodní firma</strong> z IT a startupové komunity. Nakupujeme zboží, prodáváme ho na vlastních prodejních kanálech a marketplace platformách ve střední a západní Evropě — primárně v CZ, DE, PL, FR, IT.</p>
+            <p>Nejsme agentura ani zprostředkovatel. Neseme vlastní riziko, děláme vlastní rozhodnutí. Za námi stojí roky reálné praxe v e-commerce: vlastní e-shopy, marketplace operace, systémová napojení.</p>
             <h4 class="text-white font-semibold text-base">Co hledáme</h4>
             <p>Hledáme dobré produkty a férové podmínky. Můžeme být jednoduše vaším odběratelem — fakturujete nám, my se staráme o zbytek. Nebo se dohodneme na komplexnějším modelu, pokud to dává smysl pro obě strany.</p>
             <h4 class="text-white font-semibold text-base">Jak pracujeme</h4>
-            <p>Přímá komunikace. Rychlá rozhodnutí. Žádné sliby bez pokrytí.</p>
+            <p>Přímá komunikace. Rychlá rozhodnutí. Žádné sliby na které se čeká rok.</p>
           </div>`,
       },
       contact: {
@@ -856,16 +820,17 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Spojte se s námi</h4>
-            <p>Nejrychlejší cesta je e-mail nebo zpráva na LinkedIn. Na první kontakt odpovídáme obvykle do 24 hodin.</p>
+            <p>Nejrychlejší cesta je e-mail. Na první kontakt odpovídáme obvykle do 24 hodin.</p>
             <div class="bg-white/5 rounded-lg p-4 space-y-2">
-              <p>📧 <strong class="text-white">hello@joined.cz</strong></p>
-              <p>🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
+              <p>📧 <strong class="text-white">obchod@joined.cz</strong></p>
               <p>📍 <strong class="text-white">Praha, Česká republika</strong></p>
             </div>
             <h4 class="text-white font-semibold text-base">Fakturační údaje</h4>
-            <p>Joined.cz s.r.o. · IČO: (v procesu) · Praha, CZ · Plátce DPH</p>
+            <p>Joined.cz s.r.o. · IČO: 24945455 · Praha, CZ </p>
             <h4 class="text-white font-semibold text-base">Pracovní dostupnost</h4>
             <p>Po–Pá, 9:00–18:00. Flexibilní pro mezinárodní partnery.</p>
+            <h4 class="text-white font-semibold text-base">Zpracování osobních údajů</h4>
+            <p class="text-gray-400 text-sm">Tento web slouží výhradně jako B2B vizitka. Neprovozujeme analytiku, nepoužíváme tracking cookies a neshromažďujeme žádná osobní data. Kontakt na obchod@joined.cz slouží výhradně k obchodní komunikaci.</p>
           </div>`,
       },
       partners: {
@@ -874,11 +839,11 @@ const popupData = computed(() => {
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Koho hledáme</h4>
             <p>Hledáme <strong>dodavatele, výrobce a distributory</strong>, od kterých chceme nakupovat. Nepotřebujeme váš marketing ani vaši infrastrukturu — jen dobré produkty a férové nákupní podmínky.</p>
-            <p>Funguje to nejlépe, pokud máte standardizované produkty s EAN, rozumnou nákupní cenu a zájem o CZ, DE, AT, PL nebo NL trh.</p>
+            <p>Funguje to nejlépe, pokud máte standardizované produkty s EAN, rozumnou nákupní cenu a zájem o prodej na trzích střední a západní Evropy.</p>
             <h4 class="text-white font-semibold text-base">Jak to funguje</h4>
-            <p>Jeden meeting, dohodnuté podmínky, ceník nebo nabídkový list — a jedeme. Prodáváme na vlastních účtech, na vlastní zodpovědnost. Od prvního kontaktu po první objednávku typicky 2–4 týdny.</p>
+            <p>Jeden meeting a pár emailů, dohodnuté podmínky, ceník nebo nabídkový list — a jedeme. Od prvního kontaktu po první objednávku typicky 2–4 týdny.</p>
             <h4 class="text-white font-semibold text-base">Jak začít</h4>
-            <p>Napište na <strong>hello@joined.cz</strong> nebo LinkedIn. Domluvíme krátký úvodní call a zjistíme, jestli máme zájem o vaše produkty.</p>
+            <p>Napište nám na <strong>obchod@joined.cz</strong>, určitě dokážeme najít variantu, která bude vyhovovat oběma stranám.</p>
           </div>`,
       },
       marketplaces: {
@@ -887,12 +852,10 @@ const popupData = computed(() => {
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Kde prodáváme</h4>
             <ul class="space-y-1 list-none pl-0">
-              <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka Košík</li>
-              <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
-              <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
-              <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
-              <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
-              <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (ve výhledu)</li>
+              <li>🇨🇿 <strong>CZ</strong> – Allegro, Alza</li>
+              <li>🇩🇪 <strong>DE</strong> – Kaufland, Amazon.de</li>
+              <li>🇵🇱 <strong>PL</strong> – Castorama, Leroy Merlin, Allegro, eMag</li>
+              <li>🇫🇷 <strong>FR</strong> – cDiscount, ManoMano, Leroy Merlin, Castorama</li>
             </ul>
             <h4 class="text-white font-semibold text-base">Business modely</h4>
             <p>Dropshipping, nákup-prodej, longtail strategie nebo revenue share. Vybereme model, který dává smysl pro konkrétní produkt a trh.</p>
@@ -905,17 +868,11 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Systémy a nástroje</h4>
-            <p>Pracujeme s nástroji, které jsou standardem v e-commerce:</p>
-            <div class="grid grid-cols-2 gap-2">
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">BaseLinker</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Mergado</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Pohoda / SAP</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Amazon SP-API</div>
-            </div>
+            <p>Pracujeme s nástroji, které jsou standardem v e-commerce — pro správu objednávek, feedů, skladů, reklamy i napojení na marketplace platformy. Neinvestujeme do jednoho řešení, ale do schopnosti pracovat s tím, co dává smysl pro daný trh a model.</p>
             <h4 class="text-white font-semibold text-base">Vlastní vývoj</h4>
             <p>Kde standardní nástroje nestačí, stavíme vlastní middleware — napojení na ERP, feed transformace, synchronizace skladů a objednávek.</p>
             <h4 class="text-white font-semibold text-base">Integrace</h4>
-            <p>REST API, XML/CSV feedy, webhooky. Propojujeme cokoliv s čímkoliv, pokud to dává obchodní smysl.</p>
+            <p>REST, SOAP, GraphQL, XML/CSV/JSON. Propojujeme cokoliv s čímkoliv, pokud nám to dává obchodní smysl.</p>
           </div>`,
       },
     },
@@ -925,12 +882,12 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Who we are</h4>
-            <p>Joined.cz s.r.o. is a <strong>trading company</strong> from the IT and startup community. We buy products, sell them on our own sales channels and marketplace platforms across Central and Western Europe — primarily CZ, DE, AT, PL and NL.</p>
-            <p>We are not an agency or intermediary. We operate our own accounts, carry our own risk, make our own decisions. Behind us are years of hands-on e-commerce: running e-shops, marketplace operations, system integrations.</p>
+            <p>We are technically a <strong>trading company</strong> from the IT and startup community. We buy products, sell them on our own sales channels and marketplace platforms across Central and Western Europe — primarily CZ, PL, FR, IT.</p>
+            <p>We are not an agency or intermediary. We carry our own risk, make our own decisions. Behind us are years of hands-on e-commerce: running e-shops, marketplace operations, system integrations.</p>
             <h4 class="text-white font-semibold text-base">What we look for</h4>
             <p>Good products and fair terms. You can simply sell to us — invoice us, we handle everything else. Or we can agree on a more complex model if it makes sense for both sides.</p>
             <h4 class="text-white font-semibold text-base">How we work</h4>
-            <p>Direct communication. Fast decisions. No promises without backing.</p>
+            <p>Direct communication. Fast decisions. No promises that take a year to materialise.</p>
           </div>`,
       },
       contact: {
@@ -938,16 +895,17 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Get in touch</h4>
-            <p>The fastest route is email or a LinkedIn message. We typically respond to first contact within 24 hours.</p>
+            <p>The fastest route is email. We typically respond to first contact within 24 hours.</p>
             <div class="bg-white/5 rounded-lg p-4 space-y-2">
-              <p>📧 <strong class="text-white">hello@joined.cz</strong></p>
-              <p>🔗 <strong class="text-white">linkedin.com/company/joined-cz</strong></p>
+              <p>📧 <strong class="text-white">obchod@joined.cz</strong></p>
               <p>📍 <strong class="text-white">Prague, Czech Republic</strong></p>
             </div>
             <h4 class="text-white font-semibold text-base">Company details</h4>
-            <p>Joined.cz s.r.o. · ID: (in registration) · Prague, CZ · VAT registered</p>
+            <p>Joined.cz s.r.o. · ID: 24945455 · Prague, CZ</p>
             <h4 class="text-white font-semibold text-base">Availability</h4>
             <p>Mon–Fri, 9:00–18:00 CET. Flexible for international partners.</p>
+            <h4 class="text-white font-semibold text-base">Personal Data</h4>
+            <p class="text-gray-400 text-sm">This website serves exclusively as a B2B business card. We do not run analytics, use tracking cookies, or collect any personal data. The contact at obchod@joined.cz is used solely for business communication.</p>
           </div>`,
       },
       partners: {
@@ -956,11 +914,11 @@ const popupData = computed(() => {
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Who we're looking for</h4>
             <p>We're looking for <strong>suppliers, manufacturers and distributors</strong> we can buy from. We don't need your marketing or infrastructure — just good products and fair purchase terms.</p>
-            <p>It works best if you have standardized products with EAN codes, a reasonable wholesale price, and interest in the CZ, DE, AT, PL or NL market.</p>
+            <p>It works best if you have standardized products with EAN codes, a reasonable wholesale price, and interest in selling across Central and Western European markets.</p>
             <h4 class="text-white font-semibold text-base">How it works</h4>
-            <p>One meeting, agreed terms, a price list or offer sheet — and we're off. We sell on our own accounts, on our own responsibility. From first contact to first order typically 2–4 weeks.</p>
+            <p>One meeting and a few emails, agreed terms, a price list or offer sheet — and we're off. From first contact to first order typically 2–4 weeks.</p>
             <h4 class="text-white font-semibold text-base">How to start</h4>
-            <p>Write to <strong>hello@joined.cz</strong> or LinkedIn. We'll set up a short intro call and see whether we're interested in your products.</p>
+            <p>Write to <strong>obchod@joined.cz</strong> — we'll find an arrangement that works for both sides.</p>
           </div>`,
       },
       marketplaces: {
@@ -969,12 +927,10 @@ const popupData = computed(() => {
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Where we sell</h4>
             <ul class="space-y-1 list-none pl-0">
-              <li>🇨🇿 <strong>CZ</strong> – Alza Marketplace, Mall.cz, Heureka Košík</li>
-              <li>🇩🇪 <strong>DE</strong> – Amazon.de, Kaufland.de, Otto.de</li>
-              <li>🇦🇹 <strong>AT</strong> – Amazon.at, Kaufland.at</li>
-              <li>🇵🇱 <strong>PL</strong> – Allegro, Amazon.pl</li>
-              <li>🇳🇱 <strong>NL</strong> – Bol.com, Amazon.nl</li>
-              <li>🇫🇷 <strong>FR</strong> – Amazon.fr, Cdiscount (upcoming)</li>
+              <li>🇨🇿 <strong>CZ</strong> – Allegro, Alza</li>
+              <li>🇩🇪 <strong>DE</strong> – Kaufland, Amazon.de</li>
+              <li>🇵🇱 <strong>PL</strong> – Castorama, Leroy Merlin, Allegro, eMag</li>
+              <li>🇫🇷 <strong>FR</strong> – cDiscount, ManoMano, Leroy Merlin, Castorama</li>
             </ul>
             <h4 class="text-white font-semibold text-base">Business models</h4>
             <p>Dropshipping, buy-sell, longtail strategy or revenue share. We pick the model that makes sense for the specific product and market.</p>
@@ -987,17 +943,11 @@ const popupData = computed(() => {
         body: `
           <div class="space-y-4">
             <h4 class="text-white font-semibold text-base">Systems and tools</h4>
-            <p>We work with the standard tools of e-commerce:</p>
-            <div class="grid grid-cols-2 gap-2">
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">BaseLinker</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Mergado</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Pohoda / SAP</div>
-              <div class="bg-white/4 rounded-sm px-3 py-2 text-sm">Amazon SP-API</div>
-            </div>
+            <p>We work with tools that are standard in e-commerce — for order management, feeds, inventory, advertising, and marketplace platform connectivity. We don't lock into one solution, but into the ability to work with whatever makes sense for the given market and model.</p>
             <h4 class="text-white font-semibold text-base">Custom development</h4>
             <p>Where standard tools fall short, we build our own middleware — ERP connections, feed transformations, inventory and order synchronization.</p>
             <h4 class="text-white font-semibold text-base">Integrations</h4>
-            <p>REST API, XML/CSV feeds, webhooks. We connect anything to anything, as long as it makes business sense.</p>
+            <p>REST, SOAP, GraphQL, XML/CSV/JSON. We connect anything to anything, as long as it makes business sense.</p>
           </div>`,
       },
     },
@@ -1432,6 +1382,12 @@ onUnmounted(() => {
       </div>
     </div>
 
+    <!-- ==================== DEKORATIVNÍ ČÁRA (smazat pokud nevyhovuje) ==================== -->
+    <div class="fixed bottom-0 right-14 w-px h-[50vh] z-[60] pointer-events-none"
+         style="background: linear-gradient(to top, rgba(0,210,255,0.5) 0%, rgba(0,210,255,0.1) 70%, transparent 100%)">
+    </div>
+    <!-- ==================== /DEKORATIVNÍ ČÁRA ==================== -->
+
     <!-- ==================== COOKIE BANNER ==================== -->
     <Transition name="fade">
       <div
@@ -1446,7 +1402,7 @@ onUnmounted(() => {
         <div class="flex items-center justify-between px-4 pt-3 pb-2">
           <div class="flex items-center gap-2">
             <span class="w-1 h-1 rounded-full bg-cyan-400 hud-pulse"></span>
-            <span class="text-[9px] font-mono text-cyan-400/50 uppercase tracking-[0.2em]">SYSTEM // COOKIES</span>
+            <span class="text-[9px] font-mono text-cyan-400/50 uppercase tracking-[0.2em]">SYSTEM // OZNÁMENÍ</span>
           </div>
           <button class="text-cyan-400/30 hover:text-cyan-400/70 transition-colors text-xs leading-none" @click="cookieVisible = false">✕</button>
         </div>
@@ -1454,23 +1410,17 @@ onUnmounted(() => {
         <!-- Body -->
         <div class="px-4 pb-3">
           <p class="text-xs text-gray-400 leading-relaxed">
-            Tento web používá cookies pro zajištění správné funkce a analýzu návštěvnosti.
+            Tento web slouží jako B2B vizitka. Nesbíráme osobní údaje ani neprovádíme analýzu návštěvnosti.
           </p>
         </div>
 
         <!-- Actions -->
-        <div class="px-4 pb-4 flex items-center gap-2">
+        <div class="px-4 pb-4">
           <button
-            class="flex-1 py-2 text-[10px] font-mono uppercase tracking-wider text-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20 transition-colors rounded-sm hud-btn-accept"
+            class="w-full py-2 text-[10px] font-mono uppercase tracking-wider text-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20 transition-colors rounded-sm hud-btn-accept"
             @click="cookieVisible = false"
           >
-            Přijmout
-          </button>
-          <button
-            class="flex-1 py-2 text-[10px] font-mono uppercase tracking-wider text-gray-500 hover:text-gray-300 bg-white/5 hover:bg-white/8 transition-colors rounded-sm"
-            @click="cookieVisible = false"
-          >
-            Odmítnout
+            Beru na vědomí
           </button>
         </div>
       </div>

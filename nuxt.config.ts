@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'cs' },
+      meta: [
+        { name: 'robots', content: 'noindex, nofollow' },
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
